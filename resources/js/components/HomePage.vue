@@ -19,22 +19,22 @@
                   <a href="/"><img src="/assets/images/logo-2.png" alt="" /></a>
                 </div>
                 <div class="content-box">
-                  <h4>About Us</h4>
+                  <h4>О нас</h4>
                   <p>
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
-                    eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-                    minim veniam, quis nostrud exercitation ullamco laboris.
+                    Благодарим вас за проявленный интерес к нашей компании, основному самолетостроителю, но
+                    продолжайте...
+                    я боялся боли и страданий инопланетян. Объявление
+                    для получения дополнительной информации, пожалуйста, свяжитесь с нами и займитесь физическими
+                    упражнениями.
                   </p>
-                  <a href="about.html" class="theme-btn"
-                    >About Us<i class="fas fa-long-arrow-alt-right"></i
-                  ></a>
+                  <a href="about.html" class="theme-btn">О нас<i class="fas fa-long-arrow-alt-right"></i></a>
                 </div>
                 <div class="contact-info">
-                  <h4>Contact Info</h4>
+                  <h4>Контактная информация</h4>
                   <ul>
-                    <li>Chicago 12, Melborne City, USA</li>
-                    <li><a href="tel:+8801682648101">+88 01682648101</a></li>
-                    <li><a href="mailto:info@example.com">info@example.com</a></li>
+                    <li>г.Челябинск, ул. Артиллерийская 152</li>
+                    <li><a href="tel:+8801682648101">+7(999) 252-49-56</a></li>
+                    <li><a href="mailto:e@emyaso.ru">e@emyaso.ru</a></li>
                   </ul>
                 </div>
                 <ul class="social-box">
@@ -59,15 +59,15 @@
             <ul class="info-list clearfix">
               <li>
                 <i class="flaticon-location-pin"></i>
-                219 Bedford Street Birmingham, AL 35211
+                г.Челябинск, ул. Артиллерийская 152
               </li>
               <li>
                 <i class="flaticon-envelope"></i>
-                <a href="mailto:info@example.com">info@example.com</a>
+                <a href="mailto:e@emyaso.ru">e@emyaso.ru</a>
               </li>
               <li class="phone">
                 <i class="flaticon-dial"></i>
-                <a href="tel:234554657345">+234 554 657 345</a>
+                <a href="tel:234554657345">+7(999) 252-49-56</a>
               </li>
             </ul>
           </div>
@@ -89,28 +89,25 @@
                 <i class="icon-bar"></i>
               </div>
               <nav class="main-menu navbar-expand-md navbar-light">
-                <div
-                  class="collapse navbar-collapse show clearfix"
-                  id="navbarSupportedContent"
-                >
+                <div class="collapse navbar-collapse show clearfix" id="navbarSupportedContent">
                   <ul class="navigation clearfix">
-                    <li><a href="/">Home</a></li>
-                    <li><a href="about.html">About</a></li>
+                    <li><a href="/">Главная</a></li>
+                    <li><a href="about.html">О нас</a></li>
                     <li class="dropdown">
-                      <a href="/">Shop</a>
+                      <a href="/">Магазин</a>
                       <ul>
-                        <li><a href="team.html">Our Team</a></li>
-                        <li><a href="testimonial.html">Testimonials</a></li>
+                        <li><a href="team.html">Наша команда</a></li>
+                        <li><a href="testimonial.html">Отзывы</a></li>
                       </ul>
                     </li>
 
                     <li class="dropdown">
-                      <a href="/">News</a>
+                      <a href="/">Новости</a>
                       <ul>
-                        <li><a href="blog.html">Blog</a></li>
+                        <li><a href="blog.html">Блог</a></li>
                       </ul>
                     </li>
-                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="contact.html">Контакты</a></li>
                   </ul>
                 </div>
               </nav>
@@ -120,31 +117,16 @@
                 </li>
                 <li class="search-box-outer">
                   <div class="dropdown">
-                    <button
-                      class="search-box-btn"
-                      type="button"
-                      id="dropdownMenu3"
-                      data-toggle="dropdown"
-                      aria-haspopup="true"
-                      aria-expanded="false"
-                    >
+                    <button class="search-box-btn" type="button" id="dropdownMenu3" data-toggle="dropdown"
+                      aria-haspopup="true" aria-expanded="false">
                       <span class="flaticon-search"></span>
                     </button>
-                    <ul
-                      class="dropdown-menu pull-right search-panel"
-                      aria-labelledby="dropdownMenu3"
-                    >
+                    <ul class="dropdown-menu pull-right search-panel" aria-labelledby="dropdownMenu3">
                       <li class="panel-outer">
                         <div class="form-container">
                           <form method="post" action="blog.html">
                             <div class="form-group">
-                              <input
-                                type="search"
-                                name="field-name"
-                                value=""
-                                placeholder="Search...."
-                                required=""
-                              />
+                              <input type="search" name="field-name" value="" placeholder="Search...." required="" />
                               <button type="submit" class="search-btn">
                                 <span class="fas fa-search"></span>
                               </button>
@@ -156,9 +138,7 @@
                   </div>
                 </li>
                 <li class="cart-box">
-                  <a href="shop-1.html"
-                    ><i class="flaticon-shopping-cart-1"></i><span>0</span></a
-                  >
+                  <a href="shop-1.html"><i class="flaticon-shopping-cart-1"></i><span>0</span></a>
                 </li>
                 <li class="nav-box">
                   <div class="nav-btn nav-toggler navSidebar-button clearfix">
@@ -205,8 +185,8 @@
           <h4>Contact Info</h4>
           <ul>
             <li>Chicago 12, Melborne City, USA</li>
-            <li><a href="tel:+8801682648101">+88 01682648101</a></li>
-            <li><a href="mailto:info@example.com">info@example.com</a></li>
+            <li><a href="tel:+8801682648101">+7(999) 252-49-56</a></li>
+            <li><a href="mailto:e@emyaso.ru">e@emyaso.ru</a></li>
           </ul>
         </div>
         <div class="social-links">
@@ -236,58 +216,43 @@
     <section class="main-slider">
       <div class="main-slider-carousel owl-theme owl-carousel owl-dots-none">
         <div class="slide-item">
-          <div
-            class="image-layer"
-            style="background-image: url(/assets/images/banner/banner-1.jpg)"
-          ></div>
+          <div class="image-layer" style="background-image: url(/assets/images/banner/banner-1.jpg)"></div>
           <div class="auto-container">
             <div class="content-box">
-              <h1>Fresh, Safe Quality Meats</h1>
+              <h1>Свежее мясо безопасного качества.</h1>
               <p>
-                Food that matters - to you, to farmers and to the planet we all share.
+                Еда, которая важна для вас, для фермеров и для планеты, которую мы все делим.
               </p>
               <div class="btn-box">
-                <a href="/" class="theme-btn"
-                  >Learn More<i class="fas fa-long-arrow-alt-right"></i
-                ></a>
+                <a href="/" class="theme-btn">Узнать больше<i class="fas fa-long-arrow-alt-right"></i></a>
               </div>
             </div>
           </div>
         </div>
         <div class="slide-item">
-          <div
-            class="image-layer"
-            style="background-image: url(/assets/images/banner/banner-2.jpg)"
-          ></div>
+          <div class="image-layer" style="background-image: url(/assets/images/banner/banner-2.jpg)"></div>
           <div class="auto-container">
             <div class="content-box centred">
-              <h1>Fresh, Safe Quality Meats</h1>
+              <h1>Свежее мясо безопасного качества</h1>
               <p>
-                Food that matters - to you, to farmers and to the planet we all share.
+                Еда, которая важна для вас, для фермеров и для планеты, которую мы все делим.
               </p>
               <div class="btn-box">
-                <a href="/" class="theme-btn"
-                  >Learn More<i class="fas fa-long-arrow-alt-right"></i
-                ></a>
+                <a href="/" class="theme-btn">Узнать больше<i class="fas fa-long-arrow-alt-right"></i></a>
               </div>
             </div>
           </div>
         </div>
         <div class="slide-item">
-          <div
-            class="image-layer"
-            style="background-image: url(/assets/images/banner/banner-3.jpg)"
-          ></div>
+          <div class="image-layer" style="background-image: url(/assets/images/banner/banner-3.jpg)"></div>
           <div class="auto-container">
             <div class="content-box">
-              <h1>Fresh, Safe Quality Meats</h1>
+              <h1>Свежее мясо безопасного качества</h1>
               <p>
-                Food that matters - to you, to farmers and to the planet we all share.
+                Еда, которая важна для вас, для фермеров и для планеты, которую мы все делим.
               </p>
               <div class="btn-box">
-                <a href="/" class="theme-btn"
-                  >Learn More<i class="fas fa-long-arrow-alt-right"></i
-                ></a>
+                <a href="/" class="theme-btn">Узнать больше<i class="fas fa-long-arrow-alt-right"></i></a>
               </div>
             </div>
           </div>
@@ -303,16 +268,9 @@
           <div class="row clearfix">
             <div class="col-lg-6 col-md-6 col-sm-12 video-column">
               <div id="video_block_1">
-                <div
-                  class="video-inner"
-                  style="background-image: url(/assets/images/resource/about-1.jpg)"
-                >
-                  <a
-                    href="https://www.youtube.com/watch?v=nfP5N9Yc72A&amp;t=28s"
-                    class="lightbox-image video-btn"
-                    data-caption=""
-                    ><i class="fas fa-play"></i
-                  ></a>
+                <div class="video-inner" style="background-image: url(/assets/images/resource/about-1.jpg)">
+                  <a href="https://www.youtube.com/watch?v=nfP5N9Yc72A&amp;t=28s" class="lightbox-image video-btn"
+                    data-caption=""><i class="fas fa-play"></i></a>
                 </div>
               </div>
             </div>
@@ -320,23 +278,22 @@
               <div id="content_block_1">
                 <div class="content-box">
                   <div class="sec-title">
-                    <span>About Us</span>
-                    <h2>We Provide Best Meat</h2>
+                    <span>О нас</span>
+                    <h2>Мы Предлагаем Лучшее Мясо</h2>
                   </div>
                   <div class="text">
                     <p>
-                      Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
-                      eiusmod tempor incididunt
+                      Лорем Ипсум морковь, увеличенные скидки, но не
+                      минимум времени eiusmod
                     </p>
                   </div>
                   <ul class="list clearfix">
-                    <li>100% Organic Meat</li>
-                    <li>Payment Securation</li>
+                    <li>100% органическое мясо</li>
+                    <li>Обеспечение безопасности платежей</li>
                   </ul>
                   <div class="btn-box">
-                    <a href="about.html" class="theme-btn"
-                      >View More<i class="fas fa-long-arrow-alt-right"></i
-                    ></a>
+                    <a href="about.html" class="theme-btn">Посмотреть больше<i
+                        class="fas fa-long-arrow-alt-right"></i></a>
                   </div>
                 </div>
               </div>
@@ -373,60 +330,48 @@
 
     <!-- service-section -->
     <section class="service-section bg-color-1">
-      <div
-        class="icon-layer"
-        style="background-image: url(/assets/images/icons/bg-icon-1.png)"
-      ></div>
+      <div class="icon-layer" style="background-image: url(/assets/images/icons/bg-icon-1.png)"></div>
       <div class="auto-container">
         <div class="sec-title text-center">
-          <span>What we do</span>
-          <h2>Services for You</h2>
+          <span>Что мы делаем</span>
+          <h2>Услуги для Вас</h2>
         </div>
         <div class="row clearfix">
           <div class="col-lg-4 col-md-6 col-sm-12 service-block">
-            <div
-              class="service-block-one wow fadeInUp animated animated"
-              data-wow-delay="00ms"
-              data-wow-duration="1500ms"
-            >
+            <div class="service-block-one wow fadeInUp animated animated" data-wow-delay="00ms"
+              data-wow-duration="1500ms">
               <div class="inner-box">
                 <div class="icon-box"><i class="flaticon-meat-4"></i></div>
-                <h3><a href="/">Veal Entrecote</a></h3>
-                <p>Lorem ipsum dolor sit amet, consec tetur adipis</p>
+                <h3><a href="/">Антрекот из телятины</a></h3>
+                <p>Лорем ипсум сит амет, освящает наш новый</p>
                 <div class="btn-box">
-                  <a href="/" class="theme-btn">Read More</a>
+                  <a href="/" class="theme-btn">Подробнее</a>
                 </div>
               </div>
             </div>
           </div>
           <div class="col-lg-4 col-md-6 col-sm-12 service-block">
-            <div
-              class="service-block-one wow fadeInUp animated animated"
-              data-wow-delay="300ms"
-              data-wow-duration="1500ms"
-            >
+            <div class="service-block-one wow fadeInUp animated animated" data-wow-delay="300ms"
+              data-wow-duration="1500ms">
               <div class="inner-box">
                 <div class="icon-box"><i class="flaticon-hang"></i></div>
-                <h3><a href="/">Pork Tenderloin</a></h3>
-                <p>Lorem ipsum dolor sit amet, consec tetur adipis</p>
+                <h3><a href="/">Свиная вырезка</a></h3>
+                <p>Лорем ипсум сит амет, освящает наш новый</p>
                 <div class="btn-box">
-                  <a href="/" class="theme-btn">Read More</a>
+                  <a href="/" class="theme-btn">Подробнее</a>
                 </div>
               </div>
             </div>
           </div>
           <div class="col-lg-4 col-md-6 col-sm-12 service-block">
-            <div
-              class="service-block-one wow fadeInUp animated animated"
-              data-wow-delay="600ms"
-              data-wow-duration="1500ms"
-            >
+            <div class="service-block-one wow fadeInUp animated animated" data-wow-delay="600ms"
+              data-wow-duration="1500ms">
               <div class="inner-box">
                 <div class="icon-box"><i class="flaticon-meat-5"></i></div>
-                <h3><a href="/">Beaf ribs</a></h3>
-                <p>Lorem ipsum dolor sit amet, consec tetur adipis</p>
+                <h3><a href="/">Красивые ребрышки</a></h3>
+                <p>Лорем ипсум сит амет, освящает наш новый</p>
                 <div class="btn-box">
-                  <a href="/" class="theme-btn">Read More</a>
+                  <a href="/" class="theme-btn">Подробнее</a>
                 </div>
               </div>
             </div>
@@ -473,9 +418,7 @@
                   </li>
                 </ul>
                 <div class="link-box">
-                  <a href="about.html"
-                    >Learn more about our benefit<i class="flaticon-right"></i
-                  ></a>
+                  <a href="about.html">Learn more about our benefit<i class="flaticon-right"></i></a>
                 </div>
               </div>
             </div>
@@ -512,11 +455,7 @@
         </div>
         <div class="row clearfix">
           <div class="col-lg-3 col-md-6 col-sm-12 shop-block">
-            <div
-              class="shop-block-one wow fadeInUp animated animated"
-              data-wow-delay="00ms"
-              data-wow-duration="1500ms"
-            >
+            <div class="shop-block-one wow fadeInUp animated animated" data-wow-delay="00ms" data-wow-duration="1500ms">
               <div class="inner-box">
                 <figure class="image-box">
                   <img src="/assets/images/resource/shop/shop-1.jpg" alt="" />
@@ -542,11 +481,8 @@
             </div>
           </div>
           <div class="col-lg-3 col-md-6 col-sm-12 shop-block">
-            <div
-              class="shop-block-one wow fadeInUp animated animated"
-              data-wow-delay="200ms"
-              data-wow-duration="1500ms"
-            >
+            <div class="shop-block-one wow fadeInUp animated animated" data-wow-delay="200ms"
+              data-wow-duration="1500ms">
               <div class="inner-box">
                 <figure class="image-box">
                   <img src="/assets/images/resource/shop/shop-2.jpg" alt="" />
@@ -572,11 +508,8 @@
             </div>
           </div>
           <div class="col-lg-3 col-md-6 col-sm-12 shop-block">
-            <div
-              class="shop-block-one wow fadeInUp animated animated"
-              data-wow-delay="400ms"
-              data-wow-duration="1500ms"
-            >
+            <div class="shop-block-one wow fadeInUp animated animated" data-wow-delay="400ms"
+              data-wow-duration="1500ms">
               <div class="inner-box">
                 <figure class="image-box">
                   <img src="/assets/images/resource/shop/shop-3.jpg" alt="" />
@@ -602,11 +535,8 @@
             </div>
           </div>
           <div class="col-lg-3 col-md-6 col-sm-12 shop-block">
-            <div
-              class="shop-block-one wow fadeInUp animated animated"
-              data-wow-delay="600ms"
-              data-wow-duration="1500ms"
-            >
+            <div class="shop-block-one wow fadeInUp animated animated" data-wow-delay="600ms"
+              data-wow-duration="1500ms">
               <div class="inner-box">
                 <figure class="image-box">
                   <img src="/assets/images/resource/shop/shop-4.jpg" alt="" />
@@ -746,11 +676,7 @@
     <!-- funfact-section -->
     <section class="funfact-section centred bg-color-2">
       <div class="auto-container">
-        <div
-          class="counter-inner wow slideInUp animated animated"
-          data-wow-delay="00ms"
-          data-wow-duration="1500ms"
-        >
+        <div class="counter-inner wow slideInUp animated animated" data-wow-delay="00ms" data-wow-duration="1500ms">
           <div class="line"></div>
           <div class="row clearfix">
             <div class="col-lg-3 col-md-6 col-sm-12 counter-block">
@@ -807,24 +733,13 @@
     <section class="team-section centred">
       <div class="outer-container">
         <div class="pattern-layer">
-          <div
-            class="pattern-1"
-            style="background-image: url(/assets/images/shape/shape-1.png)"
-          ></div>
-          <div
-            class="pattern-2"
-            style="background-image: url(/assets/images/shape/shape-2.png)"
-          ></div>
+          <div class="pattern-1" style="background-image: url(/assets/images/shape/shape-1.png)"></div>
+          <div class="pattern-2" style="background-image: url(/assets/images/shape/shape-2.png)"></div>
         </div>
         <div class="anim-icon">
-          <div
-            class="icon icon-1 float-bob-y"
-            style="background-image: url(/assets/images/icons/anim-icon-1.png)"
-          ></div>
-          <div
-            class="icon icon-2"
-            style="background-image: url(/assets/images/icons/anim-icon-2.png)"
-          ></div>
+          <div class="icon icon-1 float-bob-y" style="background-image: url(/assets/images/icons/anim-icon-1.png)">
+          </div>
+          <div class="icon icon-2" style="background-image: url(/assets/images/icons/anim-icon-2.png)"></div>
         </div>
         <div class="auto-container">
           <div class="sec-title style-two">
@@ -1147,16 +1062,10 @@
         </div>
         <div class="row clearfix">
           <div class="col-lg-4 col-md-6 col-sm-12 news-block">
-            <div
-              class="news-block-one wow fadeInUp animated animated"
-              data-wow-delay="00ms"
-              data-wow-duration="1500m"
-            >
+            <div class="news-block-one wow fadeInUp animated animated" data-wow-delay="00ms" data-wow-duration="1500m">
               <div class="inner-box">
                 <figure class="image-box">
-                  <a href="blog-details.html"
-                    ><img src="/assets/images/news/news-1.jpg" alt=""
-                  /></a>
+                  <a href="blog-details.html"><img src="/assets/images/news/news-1.jpg" alt="" /></a>
                 </figure>
                 <div class="lower-content">
                   <ul class="post-info clearfix">
@@ -1164,34 +1073,24 @@
                     <li>1 week ago</li>
                   </ul>
                   <h4>
-                    <a href="blog-details.html"
-                      >Seiusmod tempor incididunt ut labore et dolore magna</a
-                    >
+                    <a href="blog-details.html">Seiusmod tempor incididunt ut labore et dolore magna</a>
                   </h4>
                   <p>
                     Lorem ipsum dolor sit amet, consec tetur adipisicing elit, sed do
                     eiusmod tempor incididunt
                   </p>
                   <div class="link">
-                    <a href="blog-details.html"
-                      >READ MORE<i class="flaticon-right"></i
-                    ></a>
+                    <a href="blog-details.html">READ MORE<i class="flaticon-right"></i></a>
                   </div>
                 </div>
               </div>
             </div>
           </div>
           <div class="col-lg-4 col-md-6 col-sm-12 news-block">
-            <div
-              class="news-block-one wow fadeInUp animated animated"
-              data-wow-delay="300ms"
-              data-wow-duration="1500m"
-            >
+            <div class="news-block-one wow fadeInUp animated animated" data-wow-delay="300ms" data-wow-duration="1500m">
               <div class="inner-box">
                 <figure class="image-box">
-                  <a href="blog-details.html"
-                    ><img src="/assets/images/news/news-2.jpg" alt=""
-                  /></a>
+                  <a href="blog-details.html"><img src="/assets/images/news/news-2.jpg" alt="" /></a>
                 </figure>
                 <div class="lower-content">
                   <ul class="post-info clearfix">
@@ -1199,34 +1098,24 @@
                     <li>1 week ago</li>
                   </ul>
                   <h4>
-                    <a href="blog-details.html"
-                      >Fagna aliqua Ut enim ad minim veniam, quis nostrud</a
-                    >
+                    <a href="blog-details.html">Fagna aliqua Ut enim ad minim veniam, quis nostrud</a>
                   </h4>
                   <p>
                     Lorem ipsum dolor sit amet, consec tetur adipisicing elit, sed do
                     eiusmod tempor incididunt
                   </p>
                   <div class="link">
-                    <a href="blog-details.html"
-                      >READ MORE<i class="flaticon-right"></i
-                    ></a>
+                    <a href="blog-details.html">READ MORE<i class="flaticon-right"></i></a>
                   </div>
                 </div>
               </div>
             </div>
           </div>
           <div class="col-lg-4 col-md-6 col-sm-12 news-block">
-            <div
-              class="news-block-one wow fadeInUp animated animated"
-              data-wow-delay="600ms"
-              data-wow-duration="1500m"
-            >
+            <div class="news-block-one wow fadeInUp animated animated" data-wow-delay="600ms" data-wow-duration="1500m">
               <div class="inner-box">
                 <figure class="image-box">
-                  <a href="blog-details.html"
-                    ><img src="/assets/images/news/news-3.jpg" alt=""
-                  /></a>
+                  <a href="blog-details.html"><img src="/assets/images/news/news-3.jpg" alt="" /></a>
                 </figure>
                 <div class="lower-content">
                   <ul class="post-info clearfix">
@@ -1234,18 +1123,14 @@
                     <li>1 week ago</li>
                   </ul>
                   <h4>
-                    <a href="blog-details.html"
-                      >Golor sitmet consectetur adipisi cing eiusmod tempo</a
-                    >
+                    <a href="blog-details.html">Golor sitmet consectetur adipisi cing eiusmod tempo</a>
                   </h4>
                   <p>
                     Lorem ipsum dolor sit amet, consec tetur adipisicing elit, sed do
                     eiusmod tempor incididunt
                   </p>
                   <div class="link">
-                    <a href="blog-details.html"
-                      >READ MORE<i class="flaticon-right"></i
-                    ></a>
+                    <a href="blog-details.html">READ MORE<i class="flaticon-right"></i></a>
                   </div>
                 </div>
               </div>
@@ -1281,12 +1166,12 @@
                     <li>
                       <i class="flaticon-phone"></i>
                       <p>Call Us</p>
-                      <h5><a href="tel:8602729738">860 -272 -9738</a></h5>
+                      <h5><a href="tel:8602729738">+7(999) 252-49-56</a></h5>
                     </li>
                     <li>
                       <i class="flaticon-maps-and-flags"></i>
                       <p>Address</p>
-                      <h5>4249 Hart Street, Enfield</h5>
+                      <h5>г.Челябинск, ул. Артиллерийская 152</h5>
                     </li>
                   </ul>
                   <ul class="social-links clearfix">
@@ -1317,12 +1202,7 @@
                     <p>Stay Updated on all that’s new add noteworthy</p>
                     <form action="contact.html" method="post" class="newsletter-form">
                       <div class="form-group">
-                        <input
-                          type="email"
-                          name="email"
-                          placeholder="Email"
-                          required=""
-                        />
+                        <input type="email" name="email" placeholder="Email" required="" />
                         <button type="submit">
                           <i class="flaticon-paper-plane-1"></i>
                         </button>
