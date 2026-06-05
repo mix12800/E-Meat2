@@ -1,5 +1,5 @@
 import './theme.js';
 import { createApp } from 'vue';
-import HomePage from './components/HomePage.vue';
+import App from './App.vue';
 
-createApp(HomePage).mount('#app');
+createApp(App).mount('#app');
