@@ -1,0 +1,21 @@
+/*
+ * npm: bootstrap, fontawesome, owl.carousel, fancybox, animate.css,
+ *      jquery-ui, bootstrap-touchspin, malihu-custom-scrollbar, magnific-popup, bxslider
+ * local: carneshop/* (стили темы + flaticon)
+ */
+@import '@fortawesome/fontawesome-free/css/all.min.css';
+@import 'bootstrap/dist/css/bootstrap.min.css';
+@import 'owl.carousel/dist/assets/owl.carousel.min.css';
+@import 'owl.carousel/dist/assets/owl.theme.default.min.css';
+@import '@fancyapps/fancybox/dist/jquery.fancybox.min.css';
+@import 'animate.css/animate.min.css';
+@import 'jquery-ui/dist/themes/base/jquery-ui.min.css';
+@import 'bootstrap-touchspin/dist/jquery.bootstrap-touchspin.min.css';
+@import 'malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.css';
+@import 'magnific-popup/dist/magnific-popup.css';
+@import 'bxslider/dist/jquery.bxslider.min.css';
+
+@import './carneshop/flaticon.css';
+@import './carneshop/color.css';
+@import './carneshop/style.css';
+@import './carneshop/responsive.css';
