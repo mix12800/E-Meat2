@@ -19,3 +19,19 @@
 @import './carneshop/color.css';
 @import './carneshop/style.css';
 @import './carneshop/responsive.css';
+
+.image-layer-1{
+     background-image: url(../images/1802.jpg);
+}
+
+.image-layer-2{
+     background-image: url(../images/image.png);
+}
+
+.image-layer-3{
+     background-image: url(../images/z08hynsf0vas3hyx06e2b7x9rk0t.jpg);
+}
+
+.video-inner-image {
+     background-image: url(../images/XXL_height.jpg);
+}
