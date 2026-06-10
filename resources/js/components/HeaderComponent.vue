@@ -25,7 +25,7 @@
                 <div class="outer-box clearfix">
                     <div class="logo-box">
                         <figure class="logo">
-                            <a href="/"
+                            <a href="#" @click.prevent="ChangePage('HomePage')"
                                 ><img src="/assets/images/logo.png" alt=""
                             /></a>
                         </figure>
@@ -38,83 +38,18 @@
                             <i class="icon-bar"></i>
                         </div>
                         <nav class="main-menu navbar-expand-md navbar-light">
-                            <div
-                                class="collapse navbar-collapse show clearfix"
-                                id="navbarSupportedContent"
-                            >
-                                <ul class="navigation clearfix">
-                                    <li
-                                        :class="{ current: page == 'HomePage' }"
-                                    >
-                                        <a
-                                            href="#"
-                                            @click.prevent="
-                                                ChangePage('HomePage')
-                                            "
-                                            >Главная</a
-                                        >
-                                    </li>
-                                    <li
-                                        :class="{
-                                            current: page == 'AboutPage',
-                                        }"
-                                    >
-                                        <a
-                                            href="#"
-                                            @click.prevent="
-                                                ChangePage('AboutPage')
-                                            "
-                                            >О нас</a
-                                        >
-                                    </li>
-                                    <li
-                                        class="dropdown"
-                                        :class="{
-                                            current: page == 'TeamPage',
-                                        }"
-                                    >
-                                        <a href="/">Магазин</a>
-                                        <ul>
-                                            <li>
-                                                <a
-                                                    href="team.html"
-                                                    @click.prevent="
-                                                        ChangePage('TeamPage')
-                                                    "
-                                                    >Наша команда</a
-                                                >
-                                            </li>
-                                            <li>
-                                                <a href="testimonial.html"
-                                                    >Отзывы</a
-                                                >
-                                            </li>
-                                        </ul>
-                                    </li>
-
-                                    <li class="dropdown">
-                                        <a href="/">Новости</a>
-                                        <ul>
-                                            <li>
-                                                <a href="blog.html">Блог</a>
-                                            </li>
-                                        </ul>
-                                    </li>
-                                    <li>
-                                        <a
-                                            href="contact.html"
-                                            @click.prevent="
-                                                ChangePage('ContactPage')
-                                            "
-                                            >Контакты</a
-                                        >
-                                    </li>
-                                </ul>
-                            </div>
+                            <StickyHatComponent
+                                :ChangePage="ChangePage"
+                                :page="page"
+                            />
                         </nav>
                         <ul class="menu-right-content pull-left clearfix">
                             <li class="user-box">
-                                <a href="/"
+                                <a
+                                    href="#"
+                                    @click.prevent="
+                                        ChangePage(IsAuth ? 'cab' : 'RegPage')
+                                    "
                                     ><i
                                         class="flaticon-user-symbol-of-thin-outline"
                                     ></i
@@ -147,7 +82,7 @@
                                                             type="search"
                                                             name="field-name"
                                                             value=""
-                                                            placeholder="Search...."
+                                                            placeholder="Поиск...."
                                                             required=""
                                                         />
                                                         <button
@@ -189,13 +124,13 @@
             <div class="auto-container">
                 <div class="outer-box clearfix">
                     <figure class="logo-box pull-left">
-                        <a href="/"
+                        <a href="#" @click.prevent="ChangePage('HomePage')"
                             ><img src="/assets/images/small-logo.png" alt=""
                         /></a>
                     </figure>
                     <div class="menu-area pull-right">
                         <nav class="main-menu clearfix">
-                            <!--Оставьте это поле пустым / Меню будет отображаться через Javascript-->
+                            <StickyHatComponent :ChangePage="ChangePage" />
                         </nav>
                     </div>
                 </div>
@@ -205,8 +140,13 @@
 </template>
 
 <script>
+import StickyHatComponent from "./StickyHatComponent.vue";
+
 export default {
     name: "HeaderComponent",
-    props: ["ChangePage", "page"],
+    props: ["ChangePage", "page", 'IsAuth'],
+    components: {
+        StickyHatComponent,
+    },
 };
 </script>

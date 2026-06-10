@@ -15,15 +15,15 @@ class UserController extends Controller
     public function reg(StoreRegRequest $request)
     {
         $user = User::create($request->all());
-        return response()->json(['user' => $user, 'token' => $user->createToken('api')->plainTextToken]);
+        return response()->json(['token' => $user->createToken('api')->plainTextToken]);
     }
 
-    public function autn(StoreAuthRequest $request)
+    public function auth(StoreAuthRequest $request)
     {
         $user = User::where('login', $request->login)->first();
         if ($user) {
             if (Hash::check($request->password, $user->password)) {
-                return response()->json(['user' => $user, 'token' => $user->createToken('api')->plainTextToken]);
+                return response()->json(['token' => $user->createToken('api')->plainTextToken]);
             }
         }
         return response()->json(['errors' => ['login' => ['Ошибка входа']]]);
@@ -33,6 +33,11 @@ class UserController extends Controller
     {
         Auth::user()->currentAccessToken()->delete();
         return response()->json(['message' => 'ok']);
+    }
+
+    public function getuser()
+    {
+        return response()->json(["user" => Auth::user()]);
     }
 
     /**

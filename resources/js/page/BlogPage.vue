@@ -16,13 +16,13 @@
         <MobileMenuComponent :ChangePage="ChangePage" :page="page" />
         <!-- Конец мобильное меню -->
 
-        <!--Page Title Team-->
-        <PageTitleTeam />
+        <!--Page Title Blog-->
+        <PageTitleBlogComponent />
         <!--End Page Title-->
 
-        <!-- team-page-section -->
-        <TeamPageSection />
-        <!-- team-page-section end -->
+        <!-- sidebar-page-container -->
+        <SidebarPageContainerComponent />
+        <!-- sidebar-page-container end -->
 
         <!-- main-footer -->
         <MainFooterComponent :ChangePage="ChangePage" />
@@ -39,14 +39,13 @@ import preloaderGif from "../../images/carneshop/preloader.gif";
 import HeaderComponent from "../components/HeaderComponent.vue";
 import MainFooterComponent from "../components/MainFooterComponent.vue";
 import MobileMenuComponent from "../components/MobileMenuComponent.vue";
-import PageTitleTeam from "../components/PageTitleTeamComponent.vue";
+import PageTitleBlogComponent from "../components/PageTitleBlogComponent.vue";
 import SidebarComponent from "../components/SidebarComponent.vue";
-import TeamPageSection from "../components/TeamPageSectionComponent.vue";
+import SidebarPageContainerComponent from "../components/SidebarPageContainerComponent.vue";
 
 export default {
-    name: "TeamPage",
-    props: ['ChangePage', 'page'],
-
+    name: "BlogPage",
+    props: ["ChangePage", "page"],
     data() {
         return {
             preloaderStyle: {
@@ -54,7 +53,6 @@ export default {
             },
         };
     },
-
     mounted() {
         this.$nextTick(() => {
             if (typeof window.initCarneshopTheme === "function") {
@@ -64,12 +62,12 @@ export default {
     },
 
     components: {
+        PageTitleBlogComponent,
         SidebarComponent,
         HeaderComponent,
         MobileMenuComponent,
-        PageTitleTeam,
-        TeamPageSection,
         MainFooterComponent,
+        SidebarPageContainerComponent,
     },
 };
 </script>

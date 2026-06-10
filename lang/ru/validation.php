@@ -222,7 +222,7 @@ return [
         'minute' => 'Минута',
         'mobile' => 'Моб. номер',
         'month' => 'Месяц',
-        'name' => 'Название',
+        'name' => 'Имя',
         'password' => 'Пароль',
         'password_confirmation' => 'Подтверждение пароля',
         'phone' => 'Телефон',

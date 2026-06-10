@@ -9,11 +9,15 @@
         <!-- КОНЕЧНЫЙ элемент виджета боковой панели -->
 
         <!-- Шапка -->
-        <HeaderComponent :ChangePage="ChangePage" :page="page" />
+        <HeaderComponent
+            :ChangePage="ChangePage"
+            :page="page"
+            :IsAuth="IsAuth"
+        />
         <!-- Конец шапки -->
 
         <!-- Мобильное меню  -->
-        <MobileMenuComponent />
+        <MobileMenuComponent :ChangePage="ChangePage" :page="page" />
         <!-- Конец мобильное меню -->
 
         <!-- main-slider -->
@@ -91,7 +95,7 @@ import MainFooterComponent from "../components/MainFooterComponent.vue";
 
 export default {
     name: "HomePage",
-    props: ["ChangePage", "page"],
+    props: ["ChangePage", "page", "IsAuth"],
     data() {
         return {
             preloaderStyle: {

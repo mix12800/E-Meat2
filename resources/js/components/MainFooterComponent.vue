@@ -115,10 +115,26 @@
                     </h5>
                 </div>
                 <ul class="footer-nav pull-right clearfix">
-                    <li><a href="#" @click.prevent="ChangePage('HomePage')">Главная</a></li>
-                    <li><a href="#" @click.prevent="ChangePage('AboutPage')">О нас</a></li>
-                    <li><a href="#">Блог</a></li>
-                    <li><a href="#">Контакт</a></li>
+                    <li>
+                        <a href="#" @click.prevent="ChangePage('HomePage')"
+                            >Главная</a
+                        >
+                    </li>
+                    <li>
+                        <a href="#" @click.prevent="ChangePage('AboutPage')"
+                            >О нас</a
+                        >
+                    </li>
+                    <li>
+                        <a href="#" @click.prevent="ChangePage('BlogPage')"
+                            >Блог</a
+                        >
+                    </li>
+                    <li>
+                        <a href="#" @click.prevent="ChangePage('ContactPage')"
+                            >Контакт</a
+                        >
+                    </li>
                 </ul>
             </div>
         </div>
@@ -127,6 +143,6 @@
 <script>
 export default {
     name: "MainFooterComponent",
-    props: ['ChangePage'],
+    props: ["ChangePage"],
 };
 </script>

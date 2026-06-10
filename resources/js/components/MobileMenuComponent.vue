@@ -10,7 +10,7 @@
                 /></a>
             </div>
             <div class="menu-outer">
-                <!--Здесь меню появится автоматически через Javascript / То же меню, что и в заголовке-->
+                <StickyHatComponent :ChangePage="ChangePage" :page="page" />
             </div>
             <div class="contact-info">
                 <h4>Контактная информация</h4>
@@ -47,7 +47,13 @@
     </div>
 </template>
 <script>
+import StickyHatComponent from "./StickyHatComponent.vue";
+
 export default {
     name: "MobileMenuComponent",
+    props: ["ChangePage", "page"],
+    components: {
+        StickyHatComponent,
+    },
 };
 </script>

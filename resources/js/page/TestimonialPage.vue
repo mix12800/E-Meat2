@@ -16,13 +16,13 @@
         <MobileMenuComponent :ChangePage="ChangePage" :page="page" />
         <!-- Конец мобильное меню -->
 
-        <!--Page Title Team-->
-        <PageTitleTeam />
+        <!--Page Title Testimonial-->
+        <PageTitleTestimonialComponent />
         <!--End Page Title-->
 
-        <!-- team-page-section -->
-        <TeamPageSection />
-        <!-- team-page-section end -->
+        <!-- testimonial-page-section -->
+        <TestimonialPageSectionComponent />
+        <!-- testimonial-page-section -->
 
         <!-- main-footer -->
         <MainFooterComponent :ChangePage="ChangePage" />
@@ -39,13 +39,13 @@ import preloaderGif from "../../images/carneshop/preloader.gif";
 import HeaderComponent from "../components/HeaderComponent.vue";
 import MainFooterComponent from "../components/MainFooterComponent.vue";
 import MobileMenuComponent from "../components/MobileMenuComponent.vue";
-import PageTitleTeam from "../components/PageTitleTeamComponent.vue";
+import PageTitleTestimonialComponent from "../components/PageTitleTestimonialComponent.vue";
 import SidebarComponent from "../components/SidebarComponent.vue";
-import TeamPageSection from "../components/TeamPageSectionComponent.vue";
+import TestimonialPageSectionComponent from "../components/TestimonialPageSectionComponent.vue";
 
 export default {
-    name: "TeamPage",
-    props: ['ChangePage', 'page'],
+    name: "TestimonialPage",
+    props: ["ChangePage", "page"],
 
     data() {
         return {
@@ -67,8 +67,8 @@ export default {
         SidebarComponent,
         HeaderComponent,
         MobileMenuComponent,
-        PageTitleTeam,
-        TeamPageSection,
+        PageTitleTestimonialComponent,
+        TestimonialPageSectionComponent,
         MainFooterComponent,
     },
 };

@@ -56,8 +56,8 @@
 
 			if (!$('.mobile-menu .menu-outer').children().length) {
 				var mobileMenuContent = $('.main-header .menu-area .main-menu').html();
-				$('.mobile-menu .menu-box .menu-outer').append(mobileMenuContent);
-				$('.sticky-header .main-menu').append(mobileMenuContent);
+				// $('.mobile-menu .menu-box .menu-outer').append(mobileMenuContent);
+				// $('.sticky-header .main-menu').append(mobileMenuContent);
 			}
 
 			$('.mobile-menu li.dropdown .dropdown-btn').off('click.carneshop').on('click.carneshop', function() {

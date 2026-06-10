@@ -13,7 +13,7 @@
         <!-- Конец шапки -->
 
         <!-- Мобильное меню  -->
-        <MobileMenuComponent />
+        <MobileMenuComponent :ChangePage="ChangePage" :page="page" />
         <!-- Конец мобильное меню -->
 
         <!--Page Title Contact-->
@@ -21,22 +21,7 @@
         <!--End Page Title-->
 
         <!-- google-map-section -->
-        <section class="google-map-section">
-            <div class="map-column">
-                <div
-                    class="google-map"
-                    id="contact-google-map"
-                    data-map-lat="40.712776"
-                    data-map-lng="-74.005974"
-                    data-icon-path="assets/images/icons/map-marker.png"
-                    data-map-title="Brooklyn, New York, United Kingdom"
-                    data-map-zoom="12"
-                    data-markers='{
-                        "marker-1": [40.712776, -74.005974, "<h4>Branch Office</h4><p>77/99 New York</p>","assets/images/icons/map-marker.png"]
-                    }'
-                ></div>
-            </div>
-        </section>
+        <MapSectionComponent />
         <!-- google-map-section end -->
 
         <!-- contact-info-section -->
@@ -44,96 +29,14 @@
         <!-- contact-info-section end -->
 
         <!-- contact-section -->
-        <section class="contact-section centred">
-            <div class="auto-container">
-                <div class="sec-title">
-                    <span>Contact</span>
-                    <h2>Get In Touch</h2>
-                </div>
-                <div class="form-inner">
-                    <form
-                        method="post"
-                        action="assets/inc/sendemail.php"
-                        id="contact-form"
-                        class="default-form"
-                    >
-                        <div class="row clearfix">
-                            <div class="col-lg-6 col-md-6 col-sm-12">
-                                <div class="form-group">
-                                    <i class="far fa-user"></i>
-                                    <input
-                                        type="text"
-                                        name="username"
-                                        placeholder="Name"
-                                        required=""
-                                    />
-                                </div>
-                            </div>
-                            <div class="col-lg-6 col-md-6 col-sm-12">
-                                <div class="form-group">
-                                    <i class="far fa-envelope"></i>
-                                    <input
-                                        type="email"
-                                        name="email"
-                                        placeholder="Email"
-                                        required=""
-                                    />
-                                </div>
-                            </div>
-                            <div class="col-lg-6 col-md-6 col-sm-12">
-                                <div class="form-group">
-                                    <i class="fas fa-phone-volume"></i>
-                                    <input
-                                        type="text"
-                                        name="phone"
-                                        required=""
-                                        placeholder="Phone"
-                                    />
-                                </div>
-                            </div>
-                            <div class="col-lg-6 col-md-6 col-sm-12">
-                                <div class="form-group">
-                                    <i class="far fa-file-alt"></i>
-                                    <input
-                                        type="text"
-                                        name="subject"
-                                        required=""
-                                        placeholder="Subject"
-                                    />
-                                </div>
-                            </div>
-                            <div class="col-lg-12 col-md-12 col-sm-12">
-                                <div class="form-group">
-                                    <i class="far fa-comment-alt"></i>
-                                    <textarea
-                                        name="message"
-                                        placeholder="Message"
-                                    ></textarea>
-                                </div>
-                            </div>
-                            <div
-                                class="col-lg-12 col-md-12 col-sm-12 form-group message-btn centred"
-                            >
-                                <button
-                                    class="theme-btn"
-                                    type="submit"
-                                    name="submit-form"
-                                >
-                                    SEND MESSAGE
-                                </button>
-                            </div>
-                        </div>
-                    </form>
-                </div>
-            </div>
-        </section>
+        <ContactSectionPageComponent />
         <!-- contact-section end -->
 
         <!-- clients-section -->
         <ClientsSectionComponent />
         <!-- clients-section end -->
 
-         <!-- main-footer -->
+        <!-- main-footer -->
         <MainFooterComponent :ChangePage="ChangePage" />
         <!-- main-footer end -->
 
@@ -147,15 +50,17 @@
 import preloaderGif from "../../images/carneshop/preloader.gif";
 import ClientsSectionComponent from "../components/ClientsSectionComponent.vue";
 import ContactInfoSection from "../components/ContactInfoSection.vue";
+import ContactSectionPageComponent from "../components/ContactSectionPageComponent.vue";
 import HeaderComponent from "../components/HeaderComponent.vue";
 import MainFooterComponent from "../components/MainFooterComponent.vue";
+import MapSectionComponent from "../components/MapSectionComponent.vue";
 import MobileMenuComponent from "../components/MobileMenuComponent.vue";
 import PageTitleContact from "../components/PageTitleContactComponent.vue";
 import SidebarComponent from "../components/SidebarComponent.vue";
 
 export default {
     name: "ContactPage",
-    props: ["ChangePage"],
+    props: ["ChangePage", "page"],
 
     data() {
         return {
@@ -180,6 +85,8 @@ export default {
         ContactInfoSection,
         ClientsSectionComponent,
         MainFooterComponent,
+        MapSectionComponent,
+        ContactSectionPageComponent,
     },
 };
 </script>

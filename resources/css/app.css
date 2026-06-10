@@ -39,3 +39,15 @@
 .page-title-image1 {
      background-image: url(../images/1802.jpg);
 }
+
+.regPage {
+     /* margin-top: 100px; */
+     padding: 100px;
+     /* background-color: transparent; */
+}
+
+.regPageInp {
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+}

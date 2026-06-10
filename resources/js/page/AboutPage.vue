@@ -13,7 +13,7 @@
         <!-- Конец шапки -->
 
         <!-- Мобильное меню  -->
-        <MobileMenuComponent />
+        <MobileMenuComponent :ChangePage="ChangePage" :page="page" />
         <!-- Конец мобильное меню -->
 
         <!--Page Title-->
@@ -53,7 +53,7 @@
         <!-- clients-section end -->
 
         <!-- main-footer -->
-        <MainFooterComponent />
+        <MainFooterComponent :ChangePage="ChangePage" />
         <!-- main-footer end -->
 
         <!--Scroll to top-->
