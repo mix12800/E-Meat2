@@ -9,7 +9,13 @@
         <!-- КОНЕЧНЫЙ элемент виджета боковой панели -->
 
         <!-- Шапка -->
-        <HeaderComponent :ChangePage="ChangePage" :page="page" />
+        <HeaderComponent
+            :user="user"
+            :IsAuth="IsAuth"
+            :logout="logout"
+            :ChangePage="ChangePage"
+            :page="page"
+        />
         <!-- Конец шапки -->
 
         <!-- Мобильное меню  -->
@@ -45,7 +51,7 @@ import TeamPageSection from "../components/TeamPageSectionComponent.vue";
 
 export default {
     name: "TeamPage",
-    props: ['ChangePage', 'page'],
+    props: ["ChangePage", "page", "logout", "IsAuth", "user"],
 
     data() {
         return {

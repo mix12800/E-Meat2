@@ -48,11 +48,18 @@
                                 <a
                                     href="#"
                                     @click.prevent="
-                                        ChangePage(IsAuth ? 'cab' : 'RegPage')
+                                        ChangePage(
+                                            IsAuth ? 'OfficePage' : 'RegPage',
+                                        )
                                     "
                                     ><i
                                         class="flaticon-user-symbol-of-thin-outline"
                                     ></i
+                                ></a>
+                            </li>
+                            <li v-if="IsAuth" class="user-box">
+                                <a href="#" @click.prevent="logout()"
+                                    ><i class="bi bi-box-arrow-right"></i
                                 ></a>
                             </li>
                             <li class="search-box-outer">
@@ -100,12 +107,14 @@
                                     </ul>
                                 </div>
                             </li>
+
                             <li class="cart-box">
-                                <a href="shop-1.html"
+                                <a v-if="user.role == 'user'" href="shop-1.html"
                                     ><i class="flaticon-shopping-cart-1"></i
                                     ><span>0</span></a
                                 >
                             </li>
+
                             <li class="nav-box">
                                 <div
                                     class="nav-btn nav-toggler navSidebar-button clearfix"
@@ -144,7 +153,7 @@ import StickyHatComponent from "./StickyHatComponent.vue";
 
 export default {
     name: "HeaderComponent",
-    props: ["ChangePage", "page", 'IsAuth'],
+    props: ["ChangePage", "page", "IsAuth", "logout", "user"],
     components: {
         StickyHatComponent,
     },

@@ -9,7 +9,13 @@
         <!-- КОНЕЧНЫЙ элемент виджета боковой панели -->
 
         <!-- Шапка -->
-        <HeaderComponent :ChangePage="ChangePage" :page="page" />
+        <HeaderComponent
+            :user="user"
+            :IsAuth="IsAuth"
+            :logout="logout"
+            :ChangePage="ChangePage"
+            :page="page"
+        />
         <!-- Конец шапки -->
 
         <!-- Мобильное меню  -->
@@ -60,7 +66,7 @@ import SidebarComponent from "../components/SidebarComponent.vue";
 
 export default {
     name: "ContactPage",
-    props: ["ChangePage", "page"],
+    props: ["ChangePage", "page", "logout", "IsAuth", "user"],
 
     data() {
         return {

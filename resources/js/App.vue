@@ -1,26 +1,62 @@
 <template>
-    <HomePage :IsAuth="IsAuth" :page="page" :ChangePage="ChangePage" v-if="page == 'HomePage'" />
+    <HomePage
+        :user="user"
+        :logout="logout"
+        :IsAuth="IsAuth"
+        :page="page"
+        :ChangePage="ChangePage"
+        v-if="page == 'HomePage'"
+    />
+
     <AboutPage
+        :user="user"
+        :logout="logout"
+        :IsAuth="IsAuth"
         :page="page"
         :ChangePage="ChangePage"
         v-if="page == 'AboutPage'"
     />
 
-    <TeamPage :page="page" :ChangePage="ChangePage" v-if="page == 'TeamPage'" />
+    <TeamPage
+        :user="user"
+        :logout="logout"
+        :IsAuth="IsAuth"
+        :page="page"
+        :ChangePage="ChangePage"
+        v-if="page == 'TeamPage'"
+    />
+
     <ContactPage
+        :user="user"
+        :logout="logout"
+        :IsAuth="IsAuth"
         :ChangePage="ChangePage"
         :page="page"
         v-if="page == 'ContactPage'"
     />
+
     <TestimonialPage
+        :user="user"
+        :logout="logout"
+        :IsAuth="IsAuth"
         :ChangePage="ChangePage"
-        v-if="page == 'TestimonialPage'"
         :page="page"
+        v-if="page == 'TestimonialPage'"
     />
 
-    <BlogPage :page="page" :ChangePage="ChangePage" v-if="page == 'BlogPage'" />
+    <BlogPage
+        :user="user"
+        :logout="logout"
+        :IsAuth="IsAuth"
+        :page="page"
+        :ChangePage="ChangePage"
+        v-if="page == 'BlogPage'"
+    />
 
     <RegPage
+        :user="user"
+        :logout="logout"
+        :IsAuth="IsAuth"
         :LoginUser="LoginUser"
         :server="server"
         :page="page"
@@ -29,11 +65,24 @@
     />
 
     <AuthPage
+        :user="user"
+        :logout="logout"
+        :IsAuth="IsAuth"
         :LoginUser="LoginUser"
         :server="server"
         :page="page"
         :ChangePage="ChangePage"
         v-if="page == 'AuthPage'"
+    />
+
+    <OfficePage
+        :server="server"
+        :user="user"
+        :logout="logout"
+        :IsAuth="IsAuth"
+        :page="page"
+        :ChangePage="ChangePage"
+        v-if="page == 'OfficePage'"
     />
 </template>
 <script>
@@ -42,6 +91,7 @@ import AuthPage from "./page/AuthPage.vue";
 import BlogPage from "./page/BlogPage.vue";
 import ContactPage from "./page/ContactPage.vue";
 import HomePage from "./page/HomePage.vue";
+import OfficePage from "./page/OfficePage.vue";
 import RegPage from "./page/RegPage.vue";
 import TeamPage from "./page/TeamPage.vue";
 import TestimonialPage from "./page/TestimonialPage.vue";
@@ -57,10 +107,38 @@ export default {
         };
     },
 
+    mounted() {
+        if (localStorage.getItem("token")) {
+            this.GetUser();
+            this.IsAuth = true;
+        }
+    },
+
     methods: {
         ChangePage(page) {
             this.page = page;
             localStorage.setItem("page", page);
+        },
+
+        logout() {
+            this.IsAuth = false;
+            localStorage.removeItem("token");
+            this.ChangePage("HomePage");
+        },
+
+        GetUser() {
+            this.server("/getuser")
+                .then((result) => {
+                    this.user = result.user;
+                })
+                .catch((error) => console.error(error));
+        },
+
+        LoginUser(token) {
+            localStorage.setItem("token", token);
+            this.GetUser();
+            this.IsAuth = true;
+            this.ChangePage("OfficePage");
         },
 
         async server(route, method = "GET", formdata = null) {
@@ -82,23 +160,13 @@ export default {
             }
 
             return await fetch(this.apiServer + route, requestOptions).then(
-                (response) => response.json(),
+                (response) => {
+                    if (response.status == 401) {
+                        this.logout();
+                    }
+                    return response.json();
+                },
             );
-        },
-
-        GetUser() {
-            this.server("/getuser")
-                .then((result) => {
-                    this.user = result.user;
-                })
-                .catch((error) => console.error(error));
-        },
-
-        LoginUser(token) {
-            localStorage.setItem("token", token);
-            this.GetUser();
-            this.IsAuth = true;
-            this.ChangePage("HomePage");
         },
     },
 
@@ -111,6 +179,7 @@ export default {
         BlogPage,
         RegPage,
         AuthPage,
+        OfficePage,
     },
 };
 </script>

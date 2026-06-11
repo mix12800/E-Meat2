@@ -5,7 +5,13 @@
         <!-- устройство предварительной загрузки -->
 
         <!-- Шапка -->
-        <HeaderComponent :ChangePage="ChangePage" :page="page" />
+        <HeaderComponent
+            :user="user"
+            :IsAuth="IsAuth"
+            :logout="logout"
+            :ChangePage="ChangePage"
+            :page="page"
+        />
         <!-- Конец шапки -->
 
         <section class="contact-section centred regPage">
@@ -90,7 +96,7 @@ import HeaderComponent from "../components/HeaderComponent.vue";
 
 export default {
     name: "AuthPage",
-    props: ["ChangePage", "page", "LoginUser", "server"],
+    props: ["ChangePage", "page", "LoginUser", "server", "logout", "IsAuth" , "user"],
 
     data() {
         return {

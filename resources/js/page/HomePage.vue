@@ -10,9 +10,11 @@
 
         <!-- Шапка -->
         <HeaderComponent
+            :user="user"
+            :IsAuth="IsAuth"
+            :logout="logout"
             :ChangePage="ChangePage"
             :page="page"
-            :IsAuth="IsAuth"
         />
         <!-- Конец шапки -->
 
@@ -95,7 +97,7 @@ import MainFooterComponent from "../components/MainFooterComponent.vue";
 
 export default {
     name: "HomePage",
-    props: ["ChangePage", "page", "IsAuth"],
+    props: ["ChangePage", "page", "IsAuth", "logout", "user"],
     data() {
         return {
             preloaderStyle: {

@@ -22,36 +22,41 @@
         <MobileMenuComponent :ChangePage="ChangePage" :page="page" />
         <!-- Конец мобильное меню -->
 
-        <!--Page Title Testimonial-->
-        <PageTitleTestimonialComponent />
+        <!--Page Title Office-->
+        <PageTitleOffice />
         <!--End Page Title-->
 
-        <!-- testimonial-page-section -->
-        <TestimonialPageSectionComponent />
-        <!-- testimonial-page-section -->
+        <!-- user-info-Office -->
+        <UserInfoOffice :user="user" />
+        <!-- end user-info-Office -->
 
-        <!-- main-footer -->
-        <MainFooterComponent :ChangePage="ChangePage" />
-        <!-- main-footer end -->
+        <!-- User Order -->
+        <UserOrderComponent v-if="user.role == 'user'" />
+        <!-- End User Order -->
 
-        <!--Scroll to top-->
-        <button class="scroll-top scroll-to-target" data-target="html">
-            <span class="fa fa-arrow-up"></span>
-        </button>
+        <!-- Navigation Office -->
+        <NavigationOfficeComponent />
+        <!-- End Navigation Office -->
+
+        <!-- Control User -->
+        <ControlUser v-if="user.role == 'admin'" :server="server" />
+        <!-- End Control User -->
     </div>
 </template>
 <script>
 import preloaderGif from "../../images/carneshop/preloader.gif";
+import ControlUser from "../components/ControlUser.vue";
 import HeaderComponent from "../components/HeaderComponent.vue";
-import MainFooterComponent from "../components/MainFooterComponent.vue";
 import MobileMenuComponent from "../components/MobileMenuComponent.vue";
-import PageTitleTestimonialComponent from "../components/PageTitleTestimonialComponent.vue";
+import NavigationOfficeComponent from "../components/NavigationOfficeComponent.vue";
+import PageTitleOffice from "../components/PageTitleOfficeComponent.vue";
 import SidebarComponent from "../components/SidebarComponent.vue";
-import TestimonialPageSectionComponent from "../components/TestimonialPageSectionComponent.vue";
+import UserInfoOffice from "../components/UserInfoOfficeComponent.vue";
+import UserOrderComponent from "../components/UserOrderComponent.vue";
 
 export default {
-    name: "TestimonialPage",
-    props: ["ChangePage", "page", "logout", "IsAuth", "user"],
+    name: "OfficePage",
+    props: ["logout", "IsAuth", "page", "ChangePage", "user", "server"],
 
     data() {
         return {
@@ -67,15 +72,23 @@ export default {
                 window.initCarneshopTheme();
             }
         });
+
+        if (!localStorage.getItem("token")) {
+            this.ChangePage("HomePage");
+        }
     },
+
+    methods: {},
 
     components: {
         SidebarComponent,
         HeaderComponent,
         MobileMenuComponent,
-        PageTitleTestimonialComponent,
-        TestimonialPageSectionComponent,
-        MainFooterComponent,
+        PageTitleOffice,
+        UserInfoOffice,
+        UserOrderComponent,
+        ControlUser,
+        NavigationOfficeComponent,
     },
 };
 </script>

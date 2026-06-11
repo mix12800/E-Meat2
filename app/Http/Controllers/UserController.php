@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Http\Requests\StoreAuthRequest;
 use App\Http\Requests\StoreRegRequest;
+use App\Http\Requests\StoreUpdateUserRequest;
 use App\Models\User;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
@@ -45,7 +46,7 @@ class UserController extends Controller
      */
     public function index()
     {
-        //
+        return response()->json(['users' => User::where('id', '!=', Auth::id())->get()]);
     }
 
     /**
@@ -77,15 +78,16 @@ class UserController extends Controller
      */
     public function edit(User $user)
     {
-        //
+        // 
     }
 
     /**
      * Update the specified resource in storage.
      */
-    public function update($request, User $user)
+    public function update(StoreUpdateUserRequest $request, User $user)
     {
-        //
+        $user->update($request->all());
+        return response()->json(['message' => 'ok']);
     }
 
     /**
