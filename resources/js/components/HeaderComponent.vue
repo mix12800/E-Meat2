@@ -49,7 +49,7 @@
                                     href="#"
                                     @click.prevent="
                                         ChangePage(
-                                            IsAuth ? 'OfficePage' : 'RegPage',
+                                            IsAuth ? 'OfficePage' : 'AuthPage',
                                         )
                                     "
                                     ><i

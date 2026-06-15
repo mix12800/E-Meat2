@@ -42,6 +42,8 @@
         <ControlUser v-if="user.role == 'admin'" :server="server" />
         <!-- End Control User -->
     </div>
+
+   
 </template>
 <script>
 import preloaderGif from "../../images/carneshop/preloader.gif";
