@@ -34,20 +34,31 @@
         <UserOrderComponent v-if="user.role == 'user'" />
         <!-- End User Order -->
 
-        <!-- Navigation Office -->
-        <NavigationOfficeComponent />
-        <!-- End Navigation Office -->
+        <template v-if="user.role == 'admin'">
+            <!-- Navigation Office Admin-->
+            <NavigationOfficeComponent
+                :ChangePageOffice="ChangePageOffice"
+                :pageOffice="pageOffice"
+            />
+            <!-- End Navigation Office -->
 
-        <!-- Control User -->
-        <ControlUser v-if="user.role == 'admin'" :server="server" />
-        <!-- End Control User -->
+            <!-- Control User -->
+            <ControlUserComponent
+                v-if="pageOffice == 'ControlUserComponent'"
+                :server="server"
+            />
+            <!-- End Control User -->
+
+            <ControlСategorieComponent
+                v-if="pageOffice == 'СategorieControlComponent'"
+                :server="server"
+            />
+        </template>
     </div>
-
-   
 </template>
 <script>
 import preloaderGif from "../../images/carneshop/preloader.gif";
-import ControlUser from "../components/ControlUser.vue";
+import ControlUserComponent from "../components/ControlUserComponent.vue";
 import HeaderComponent from "../components/HeaderComponent.vue";
 import MobileMenuComponent from "../components/MobileMenuComponent.vue";
 import NavigationOfficeComponent from "../components/NavigationOfficeComponent.vue";
@@ -55,6 +66,7 @@ import PageTitleOffice from "../components/PageTitleOfficeComponent.vue";
 import SidebarComponent from "../components/SidebarComponent.vue";
 import UserInfoOffice from "../components/UserInfoOfficeComponent.vue";
 import UserOrderComponent from "../components/UserOrderComponent.vue";
+import ControlСategorieComponent from "../components/ControlСategorieComponent.vue";
 
 export default {
     name: "OfficePage",
@@ -65,6 +77,8 @@ export default {
             preloaderStyle: {
                 backgroundImage: `url(${preloaderGif})`,
             },
+            pageOffice:
+                localStorage.getItem("pageOffice") || "ControlUserComponent",
         };
     },
 
@@ -80,7 +94,12 @@ export default {
         }
     },
 
-    methods: {},
+    methods: {
+        ChangePageOffice(page) {
+            this.pageOffice = page;
+            localStorage.setItem("pageOffice", page);
+        },
+    },
 
     components: {
         SidebarComponent,
@@ -89,8 +108,9 @@ export default {
         PageTitleOffice,
         UserInfoOffice,
         UserOrderComponent,
-        ControlUser,
+        ControlUserComponent,
         NavigationOfficeComponent,
+        ControlСategorieComponent,
     },
 };
 </script>

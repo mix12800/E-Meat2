@@ -5,21 +5,20 @@
             id="navbarSupportedContent"
         >
             <ul class="navigation clearfix">
-                <li class="current">
-                    <a href="#">Пользователи</a>
+                <li :class="{ current: pageOffice == 'ControlUserComponent' }">
+                    <a href="#" @click.prevent="ChangePageOffice('ControlUserComponent')">Пользователи</a>
+                </li>
+                <li :class="{ current: pageOffice == 'СategorieControlComponent' }">
+                    <a href="#" @click.prevent="ChangePageOffice('СategorieControlComponent')">категории</a>
+                </li>
+                <li>
+                    <a href="#">Товары</a>
                 </li>
                 <li>
                     <a href="#">Заказы</a>
                 </li>
                 <li>
-                    <a href="#">категории</a>
-                </li>
-
-                <li>
                     <a href="#">Блог</a>
-                </li>
-                <li>
-                    <a href="#">Товары</a>
                 </li>
             </ul>
         </div>
@@ -28,5 +27,6 @@
 <script>
 export default {
     name: "NavigationOfficeComponent",
+    props: ["ChangePageOffice", "pageOffice"],
 };
 </script>

@@ -155,7 +155,7 @@ export default {
                 redirect: "follow",
             };
 
-            if (method != "GET") {
+            if (method != "GET" && method != "DELETE") {
                 requestOptions.body = formdata;
             }
 
