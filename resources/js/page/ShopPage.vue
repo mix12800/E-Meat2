@@ -8,7 +8,6 @@
         <SidebarComponent :ChangePage="ChangePage" />
         <!-- КОНЕЧНЫЙ элемент виджета боковой панели -->
 
-        <!-- Шапка -->
         <HeaderComponent
             :user="user"
             :IsAuth="IsAuth"
@@ -22,13 +21,13 @@
         <MobileMenuComponent :ChangePage="ChangePage" :page="page" />
         <!-- Конец мобильное меню -->
 
-        <!--Page Title Blog-->
-        <PageTitleBlogComponent :ChangePage="ChangePage" />
+        <!--Page Title Shop List-->
+        <PageTitleShopListComponent :ChangePage="ChangePage" />
         <!--End Page Title-->
 
-        <!-- sidebar-page-container -->
-        <SidebarPageContainerComponent />
-        <!-- sidebar-page-container end -->
+        <!-- shop-page-section -->
+        <ShopPageSectionComponent />
+        <!-- shop-page-section end -->
 
         <!-- main-footer -->
         <MainFooterComponent :ChangePage="ChangePage" />
@@ -45,13 +44,12 @@ import preloaderGif from "../../images/carneshop/preloader.gif";
 import HeaderComponent from "../components/HeaderComponent.vue";
 import MainFooterComponent from "../components/MainFooterComponent.vue";
 import MobileMenuComponent from "../components/MobileMenuComponent.vue";
-import PageTitleBlogComponent from "../components/PageTitleBlogComponent.vue";
+import PageTitleShopListComponent from "../components/PageTitleShopListComponent.vue";
+import ShopPageSectionComponent from "../components/ShopPageSectionComponent.vue";
 import SidebarComponent from "../components/SidebarComponent.vue";
-import SidebarPageContainerComponent from "../components/SidebarPageContainerComponent.vue";
-
 export default {
-    name: "BlogPage",
-    props: ["ChangePage", "page", "logout", "IsAuth", "user"],
+    name: "ShopPage",
+    props: ["user", "IsAuth", "logout", "ChangePage", "page"],
     data() {
         return {
             preloaderStyle: {
@@ -68,12 +66,12 @@ export default {
     },
 
     components: {
-        PageTitleBlogComponent,
+        PageTitleShopListComponent,
         SidebarComponent,
         HeaderComponent,
         MobileMenuComponent,
         MainFooterComponent,
-        SidebarPageContainerComponent,
+        ShopPageSectionComponent,
     },
 };
 </script>

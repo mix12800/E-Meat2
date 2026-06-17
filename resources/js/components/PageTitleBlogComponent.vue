@@ -9,7 +9,7 @@
                     <h1>Стандартный блог</h1>
                 </div>
                 <ul class="bread-crumb clearfix">
-                    <li><a href="index.html">Главная</a></li>
+                    <li><a href="index.html" @click.prevent="ChangePage('HomePage')">Главная</a></li>
                     <li>Стандартный блог</li>
                 </ul>
             </div>
@@ -19,5 +19,6 @@
 <script>
 export default {
     name: "PageTitleBlogComponent",
+    props: ["ChangePage"],
 };
 </script>

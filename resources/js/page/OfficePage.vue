@@ -23,7 +23,7 @@
         <!-- Конец мобильное меню -->
 
         <!--Page Title Office-->
-        <PageTitleOffice />
+        <PageTitleOffice :ChangePage="ChangePage"/>
         <!--End Page Title-->
 
         <!-- user-info-Office -->

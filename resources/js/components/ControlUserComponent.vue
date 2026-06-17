@@ -33,7 +33,11 @@
                             v-model="user.name"
                             type="text"
                             class="form-control"
+                            :class="{ 'is-invalid': errors.name }"
                         />
+                        <div v-if="errors.name && errors" class="invalid-feedback">
+                            {{ errors.name.join(", ") }}
+                        </div>
                     </div>
                     <div class="mb-3">
                         <label for="email">Почта</label>
@@ -42,7 +46,11 @@
                             v-model="user.email"
                             type="text"
                             class="form-control"
+                            :class="{ 'is-invalid': errors.email }"
                         />
+                        <div v-if="errors.email" class="invalid-feedback">
+                            {{ errors.email.join(". ") }}
+                        </div>
                     </div>
                     <div class="mb-3">
                         <label for="login">Логин</label>
@@ -51,7 +59,11 @@
                             v-model="user.login"
                             type="text"
                             class="form-control"
+                            :class="{ 'is-invalid': errors.login }"
                         />
+                        <div v-if="errors.login" class="invalid-feedback">
+                            {{ errors.login.join(". ") }}
+                        </div>
                     </div>
                     <div class="mb-3">
                         <label for="password">Пароль</label>
@@ -181,13 +193,22 @@
     </table>
 </template>
 <script>
+import { error } from "jquery";
+
 export default {
     name: "ControlUser",
     props: ["server"],
     data() {
         return {
             users: [],
-            user: {},
+            user: {
+                name: "",
+                email: "",
+                login: "",
+                password: "",
+                role: "",
+            },
+            errors: [],
         };
     },
 
@@ -221,9 +242,13 @@ export default {
             formdata.append("role", this.user.role);
             this.server("/users/" + id, "PATCH", formdata)
                 .then((result) => {
-                    this.GetUsers();
-                    document.querySelector("#upm").click();
-                    this.user = {};
+                    if (result.errors) {
+                        this.errors = result.errors;                        
+                    } else {
+                        this.GetUsers();
+                        document.querySelector("#upm").click();
+                        this.user = {};
+                    }
                 })
                 .catch((error) => console.error(error));
         },

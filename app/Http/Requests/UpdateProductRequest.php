@@ -5,15 +5,15 @@ namespace App\Http\Requests;
 use Illuminate\Contracts\Validation\ValidationRule;
 use Illuminate\Foundation\Http\FormRequest;
 
-class StoreUpdateUserRequest extends FormRequest
+class UpdateProductRequest extends FormRequest
 {
     /**
      * Determine if the user is authorized to make this request.
      */
-    // public function authorize(): bool
-    // {
-    //     return false;
-    // }
+    public function authorize(): bool
+    {
+        return false;
+    }
 
     /**
      * Get the validation rules that apply to the request.
@@ -23,10 +23,7 @@ class StoreUpdateUserRequest extends FormRequest
     public function rules(): array
     {
         return [
-            'name' => 'required',
-            'email' => 'required|email',
-            'login' => 'required',
-            'role' => 'required',
+            //
         ];
     }
 }

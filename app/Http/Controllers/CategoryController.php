@@ -14,7 +14,7 @@ class CategoryController extends Controller
      */
     public function index()
     {
-        //
+        return response()->json(["categories" => Category::orderBy("created_at", "desc")->get()]);
     }
 
     /**
@@ -31,15 +31,15 @@ class CategoryController extends Controller
     public function store(StoreCategoryRequest $request)
     {
         $Category = Category::create($request->all());
-        return response()->json(["Category" => $Category]);
+        return response()->json(["category" => $Category]);
     }
 
     /**
      * Display the specified resource.
      */
-    public function show()
+    public function show(Category $Category)
     {
-        // 
+        return response()->json(["Category" => $Category]);
     }
 
     /**
@@ -56,7 +56,7 @@ class CategoryController extends Controller
     public function update(UpdateСategoryRequest $request, Category $Category)
     {
         $Category->update($request->all());
-        return response()->json(["Category" => $Category]);
+        return response()->json(["category" => $Category]);
     }
 
     /**

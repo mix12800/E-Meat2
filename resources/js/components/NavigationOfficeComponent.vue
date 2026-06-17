@@ -1,5 +1,5 @@
 <template>
-    <nav class="main-menu navbar-expand-md navbar-light ml-3">
+    <nav class="main-menu navbar-expand-md navbar-light ml-3 w-100">
         <div
             class="collapse navbar-collapse show clearfix"
             id="navbarSupportedContent"

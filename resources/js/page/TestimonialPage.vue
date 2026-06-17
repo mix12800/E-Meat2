@@ -23,7 +23,7 @@
         <!-- Конец мобильное меню -->
 
         <!--Page Title Testimonial-->
-        <PageTitleTestimonialComponent />
+        <PageTitleTestimonialComponent :ChangePage="ChangePage" />
         <!--End Page Title-->
 
         <!-- testimonial-page-section -->

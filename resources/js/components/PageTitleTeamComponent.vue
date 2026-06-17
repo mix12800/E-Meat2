@@ -6,7 +6,13 @@
                     <h1>Команда экспертов</h1>
                 </div>
                 <ul class="bread-crumb clearfix">
-                    <li><a href="index.html">Главная</a></li>
+                    <li>
+                        <a
+                            href="index.html"
+                            @click.prevent="ChangePage('HomePage')"
+                            >Главная</a
+                        >
+                    </li>
                     <li>Наша команда</li>
                 </ul>
             </div>
@@ -16,5 +22,6 @@
 <script>
 export default {
     name: "PageTitleTeam",
+    props: ["ChangePage"],
 };
 </script>

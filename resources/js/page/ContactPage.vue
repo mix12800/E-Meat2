@@ -23,7 +23,7 @@
         <!-- Конец мобильное меню -->
 
         <!--Page Title Contact-->
-        <PageTitleContact />
+        <PageTitleContact :ChangePage="ChangePage"/>
         <!--End Page Title-->
 
         <!-- google-map-section -->

@@ -23,7 +23,7 @@
         <!-- Конец мобильное меню -->
 
         <!--Page Title Team-->
-        <PageTitleTeam />
+        <PageTitleTeam :ChangePage="ChangePage" />
         <!--End Page Title-->
 
         <!-- team-page-section -->

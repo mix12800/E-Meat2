@@ -75,6 +75,15 @@
         v-if="page == 'AuthPage'"
     />
 
+    <ShopPage
+        :user="user"
+        :IsAuth="IsAuth"
+        :logout="logout"
+        :ChangePage="ChangePage"
+        :page="page"
+        v-if="page == 'ShopPage'"
+    />
+
     <OfficePage
         :server="server"
         :user="user"
@@ -93,6 +102,7 @@ import ContactPage from "./page/ContactPage.vue";
 import HomePage from "./page/HomePage.vue";
 import OfficePage from "./page/OfficePage.vue";
 import RegPage from "./page/RegPage.vue";
+import ShopPage from "./page/ShopPage.vue";
 import TeamPage from "./page/TeamPage.vue";
 import TestimonialPage from "./page/TestimonialPage.vue";
 
@@ -180,6 +190,7 @@ export default {
         RegPage,
         AuthPage,
         OfficePage,
+        ShopPage,
     },
 };
 </script>

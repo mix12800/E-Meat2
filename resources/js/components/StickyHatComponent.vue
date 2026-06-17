@@ -20,7 +20,7 @@
                     current: page == 'TeamPage' || page == 'TestimonialPage',
                 }"
             >
-                <a href="#">Магазин</a>
+                <a href="#" @click.prevent="ChangePage('ShopPage')">Магазин</a>
                 <ul>
                     <li>
                         <a
@@ -73,6 +73,6 @@
 <script>
 export default {
     name: "StickyHatComponent",
-    props: ['ChangePage', 'page'],
+    props: ["ChangePage", "page"],
 };
 </script>

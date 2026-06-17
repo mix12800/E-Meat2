@@ -2,6 +2,7 @@
 
 namespace Database\Seeders;
 
+use App\Models\Category;
 use App\Models\User;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
@@ -24,6 +25,13 @@ class DatabaseSeeder extends Seeder
 
 
         $Users = [
+            [
+                'name' => 'admin',
+                'email' => 'admin@admin.com',
+                'login' => 'admin',
+                'role' => 'admin',
+                'password' => 'admin',
+            ],
             [
                 'name' => 'king',
                 'email' => 'king-sutton97@gmail.com',
@@ -67,7 +75,7 @@ class DatabaseSeeder extends Seeder
                 'password' => 'mcgovern',
             ],
             // 
-             [
+            [
                 'name' => 'codie',
                 'email' => 'codie_capps37@gmail.com',
                 'login' => 'codie',
@@ -97,16 +105,33 @@ class DatabaseSeeder extends Seeder
             ]
         ];
 
-        User::create([
-            'name' => 'admin',
-            'email' => 'admin@admin.com',
-            'login' => 'admin',
-            'role' => 'admin',
-            'password' => 'admin',
-        ]);
+        $Categories = [
+            [
+                'name' => 'Антрекот',
+            ],
+            [
+                'name' => 'Вырезка',
+            ],
+            [
+                'name' => 'Ребрышки',
+            ],
+            [
+                'name' => 'Стейки',
+            ],
+            [
+                'name' => 'Телятина',
+            ],
+            [
+                'name' => 'Свинина',
+            ]
+        ];
 
         foreach ($Users as $User) {
             User::create($User);
+        }
+
+        foreach ($Categories as $Category) {
+            Category::create($Category);
         }
     }
 }
