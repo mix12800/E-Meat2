@@ -47,14 +47,6 @@ return [
             'report' => false,
         ],
 
-        'photos' => [
-            'driver' => 'local',
-            'root' => storage_path('photos'),
-            'url' => '/public',
-            'visibility' => 'public',
-            'throw' => false,
-        ],
-
         's3' => [
             'driver' => 's3',
             'key' => env('AWS_ACCESS_KEY_ID'),
