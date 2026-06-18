@@ -25,8 +25,10 @@ class StoreProductRequest extends FormRequest
         return [
             "title" => "required",
             "description" => "required",
-            "photo" => "required",
-            "price" => "required",
+            "photo" => "required|image",
+            "price" => "required|numeric|min:1",
+            "quantity"=>"required|numeric|min:1",
+            "category_id" => "required|exists:categories,id",
         ];
     }
 }

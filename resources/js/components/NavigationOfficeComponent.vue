@@ -6,13 +6,37 @@
         >
             <ul class="navigation clearfix">
                 <li :class="{ current: pageOffice == 'ControlUserComponent' }">
-                    <a href="#" @click.prevent="ChangePageOffice('ControlUserComponent')">Пользователи</a>
+                    <a
+                        href="#"
+                        @click.prevent="
+                            ChangePageOffice('ControlUserComponent')
+                        "
+                        >Пользователи</a
+                    >
                 </li>
-                <li :class="{ current: pageOffice == 'СategorieControlComponent' }">
-                    <a href="#" @click.prevent="ChangePageOffice('СategorieControlComponent')">категории</a>
+                <li
+                    :class="{
+                        current: pageOffice == 'СategorieControlComponent',
+                    }"
+                >
+                    <a
+                        href="#"
+                        @click.prevent="
+                            ChangePageOffice('СategorieControlComponent')
+                        "
+                        >категории</a
+                    >
                 </li>
-                <li>
-                    <a href="#">Товары</a>
+                <li
+                    :class="{
+                        current: pageOffice == 'ControlProductsComponent',
+                    }"
+                >
+                    <a
+                        href="#"
+                        @click="ChangePageOffice('ControlProductsComponent')"
+                        >Товары</a
+                    >
                 </li>
                 <li>
                     <a href="#">Заказы</a>

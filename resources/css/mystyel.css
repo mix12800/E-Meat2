@@ -45,3 +45,9 @@
      border-radius: 5px;
      margin-left: 4px;
 }
+
+.invalid-feedbacks {
+     margin-top: .25rem;
+     font-size: .875em;
+     color: #dc3545;
+}

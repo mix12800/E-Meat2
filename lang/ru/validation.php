@@ -199,6 +199,8 @@ return [
     */
 
     'attributes' => [
+        'category_id' => 'категория',
+        'quantity' => 'Количество продукта',
         'login' => 'Логин',
         'active' => 'Активно',
         'address' => 'Адрес',

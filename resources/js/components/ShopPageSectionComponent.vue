@@ -93,465 +93,73 @@
                 <div class="col-lg-9 col-md-12 col-sm-12 content-side">
                     <div class="our-shop">
                         <div class="row clearfix">
-                            <div class="col-lg-4 col-md-6 col-sm-12 shop-block">
-                                <div class="shop-block-one">
-                                    <div class="inner-box">
-                                        <figure class="image-box">
-                                            <img
-                                                src="assets/images/resource/shop/shop-1.jpg"
-                                                alt=""
-                                            />
-                                            <ul class="list clearfix">
-                                                <li>
-                                                    <a href="shop-1.html"
-                                                        ><i
-                                                            class="flaticon-cart"
-                                                        ></i
-                                                    ></a>
-                                                </li>
-                                                <li>
+                            <template v-for="product in products">
+                                <!--Карточка товара -->
+                                <div
+                                    class="col-lg-4 col-md-6 col-sm-12 shop-block"
+                                >
+                                    <div class="shop-block-one">
+                                        <div class="inner-box">
+                                            <figure class="image-box">
+                                                <img :src="'storage/'+ product.photo" alt="" />
+                                                <ul class="list clearfix">
+                                                    <li>
+                                                        <a href="shop-1.html"
+                                                            ><i
+                                                                class="flaticon-cart"
+                                                            ></i
+                                                        ></a>
+                                                    </li>
+                                                    <li>
+                                                        <a
+                                                            href="shop-details.html"
+                                                            >В карзину</a
+                                                        >
+                                                    </li>
+                                                </ul>
+                                            </figure>
+                                            <div class="lower-content">
+                                                <h6>
                                                     <a href="shop-details.html"
-                                                        >add to cart</a
+                                                        >Whole Tenderloin</a
                                                     >
-                                                </li>
-                                            </ul>
-                                        </figure>
-                                        <div class="lower-content">
-                                            <h6>
-                                                <a href="shop-details.html"
-                                                    >Whole Tenderloin</a
+                                                </h6>
+                                                <ul class="rating clearfix">
+                                                    <li>
+                                                        <i
+                                                            class="fas fa-star"
+                                                        ></i>
+                                                    </li>
+                                                    <li>
+                                                        <i
+                                                            class="fas fa-star"
+                                                        ></i>
+                                                    </li>
+                                                    <li>
+                                                        <i
+                                                            class="fas fa-star"
+                                                        ></i>
+                                                    </li>
+                                                    <li>
+                                                        <i
+                                                            class="fas fa-star"
+                                                        ></i>
+                                                    </li>
+                                                    <li>
+                                                        <i
+                                                            class="fas fa-star"
+                                                        ></i>
+                                                    </li>
+                                                </ul>
+                                                <span class="price"
+                                                    >$ 400.00</span
                                                 >
-                                            </h6>
-                                            <ul class="rating clearfix">
-                                                <li>
-                                                    <i class="fas fa-star"></i>
-                                                </li>
-                                                <li>
-                                                    <i class="fas fa-star"></i>
-                                                </li>
-                                                <li>
-                                                    <i class="fas fa-star"></i>
-                                                </li>
-                                                <li>
-                                                    <i class="fas fa-star"></i>
-                                                </li>
-                                                <li>
-                                                    <i class="fas fa-star"></i>
-                                                </li>
-                                            </ul>
-                                            <span class="price">$ 400.00</span>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
-                            </div>
-                            <div class="col-lg-4 col-md-6 col-sm-12 shop-block">
-                                <div class="shop-block-one">
-                                    <div class="inner-box">
-                                        <figure class="image-box">
-                                            <img
-                                                src="assets/images/resource/shop/shop-2.jpg"
-                                                alt=""
-                                            />
-                                            <ul class="list clearfix">
-                                                <li>
-                                                    <a href="shop-1.html"
-                                                        ><i
-                                                            class="flaticon-cart"
-                                                        ></i
-                                                    ></a>
-                                                </li>
-                                                <li>
-                                                    <a href="shop-details.html"
-                                                        >add to cart</a
-                                                    >
-                                                </li>
-                                            </ul>
-                                        </figure>
-                                        <div class="lower-content">
-                                            <h6>
-                                                <a href="shop-details.html"
-                                                    >Whole Fryer</a
-                                                >
-                                            </h6>
-                                            <ul class="rating clearfix">
-                                                <li>
-                                                    <i class="fas fa-star"></i>
-                                                </li>
-                                                <li>
-                                                    <i class="fas fa-star"></i>
-                                                </li>
-                                                <li>
-                                                    <i class="fas fa-star"></i>
-                                                </li>
-                                                <li>
-                                                    <i class="fas fa-star"></i>
-                                                </li>
-                                                <li>
-                                                    <i class="fas fa-star"></i>
-                                                </li>
-                                            </ul>
-                                            <span class="price">$ 450.00</span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-lg-4 col-md-6 col-sm-12 shop-block">
-                                <div class="shop-block-one">
-                                    <div class="inner-box">
-                                        <figure class="image-box">
-                                            <img
-                                                src="assets/images/resource/shop/shop-3.jpg"
-                                                alt=""
-                                            />
-                                            <ul class="list clearfix">
-                                                <li>
-                                                    <a href="shop-1.html"
-                                                        ><i
-                                                            class="flaticon-cart"
-                                                        ></i
-                                                    ></a>
-                                                </li>
-                                                <li>
-                                                    <a href="shop-details.html"
-                                                        >add to cart</a
-                                                    >
-                                                </li>
-                                            </ul>
-                                        </figure>
-                                        <div class="lower-content">
-                                            <h6>
-                                                <a href="shop-details.html"
-                                                    >Rib Steak</a
-                                                >
-                                            </h6>
-                                            <ul class="rating clearfix">
-                                                <li>
-                                                    <i class="fas fa-star"></i>
-                                                </li>
-                                                <li>
-                                                    <i class="fas fa-star"></i>
-                                                </li>
-                                                <li>
-                                                    <i class="fas fa-star"></i>
-                                                </li>
-                                                <li>
-                                                    <i class="fas fa-star"></i>
-                                                </li>
-                                                <li>
-                                                    <i class="fas fa-star"></i>
-                                                </li>
-                                            </ul>
-                                            <span class="price">$ 500.00</span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-lg-4 col-md-6 col-sm-12 shop-block">
-                                <div class="shop-block-one">
-                                    <div class="inner-box">
-                                        <figure class="image-box">
-                                            <img
-                                                src="assets/images/resource/shop/shop-4.jpg"
-                                                alt=""
-                                            />
-                                            <ul class="list clearfix">
-                                                <li>
-                                                    <a href="shop-1.html"
-                                                        ><i
-                                                            class="flaticon-cart"
-                                                        ></i
-                                                    ></a>
-                                                </li>
-                                                <li>
-                                                    <a href="shop-details.html"
-                                                        >add to cart</a
-                                                    >
-                                                </li>
-                                            </ul>
-                                        </figure>
-                                        <div class="lower-content">
-                                            <h6>
-                                                <a href="shop-details.html"
-                                                    >Chuck Roast</a
-                                                >
-                                            </h6>
-                                            <ul class="rating clearfix">
-                                                <li>
-                                                    <i class="fas fa-star"></i>
-                                                </li>
-                                                <li>
-                                                    <i class="fas fa-star"></i>
-                                                </li>
-                                                <li>
-                                                    <i class="fas fa-star"></i>
-                                                </li>
-                                                <li>
-                                                    <i class="fas fa-star"></i>
-                                                </li>
-                                                <li>
-                                                    <i class="fas fa-star"></i>
-                                                </li>
-                                            </ul>
-                                            <span class="price">$ 380.00</span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-lg-4 col-md-6 col-sm-12 shop-block">
-                                <div class="shop-block-one">
-                                    <div class="inner-box">
-                                        <figure class="image-box">
-                                            <img
-                                                src="assets/images/resource/shop/shop-9.jpg"
-                                                alt=""
-                                            />
-                                            <ul class="list clearfix">
-                                                <li>
-                                                    <a href="shop-1.html"
-                                                        ><i
-                                                            class="flaticon-cart"
-                                                        ></i
-                                                    ></a>
-                                                </li>
-                                                <li>
-                                                    <a href="shop-details.html"
-                                                        >add to cart</a
-                                                    >
-                                                </li>
-                                            </ul>
-                                        </figure>
-                                        <div class="lower-content">
-                                            <h6>
-                                                <a href="shop-details.html"
-                                                    >Life Basics Cacay Oil</a
-                                                >
-                                            </h6>
-                                            <ul class="rating clearfix">
-                                                <li>
-                                                    <i class="fas fa-star"></i>
-                                                </li>
-                                                <li>
-                                                    <i class="fas fa-star"></i>
-                                                </li>
-                                                <li>
-                                                    <i class="fas fa-star"></i>
-                                                </li>
-                                                <li>
-                                                    <i class="fas fa-star"></i>
-                                                </li>
-                                                <li>
-                                                    <i class="fas fa-star"></i>
-                                                </li>
-                                            </ul>
-                                            <span class="price">$ 400.00</span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-lg-4 col-md-6 col-sm-12 shop-block">
-                                <div class="shop-block-one">
-                                    <div class="inner-box">
-                                        <figure class="image-box">
-                                            <img
-                                                src="assets/images/resource/shop/shop-10.jpg"
-                                                alt=""
-                                            />
-                                            <ul class="list clearfix">
-                                                <li>
-                                                    <a href="shop-1.html"
-                                                        ><i
-                                                            class="flaticon-cart"
-                                                        ></i
-                                                    ></a>
-                                                </li>
-                                                <li>
-                                                    <a href="shop-details.html"
-                                                        >add to cart</a
-                                                    >
-                                                </li>
-                                            </ul>
-                                        </figure>
-                                        <div class="lower-content">
-                                            <h6>
-                                                <a href="shop-details.html"
-                                                    >Fresho Mutton</a
-                                                >
-                                            </h6>
-                                            <ul class="rating clearfix">
-                                                <li>
-                                                    <i class="fas fa-star"></i>
-                                                </li>
-                                                <li>
-                                                    <i class="fas fa-star"></i>
-                                                </li>
-                                                <li>
-                                                    <i class="fas fa-star"></i>
-                                                </li>
-                                                <li>
-                                                    <i class="fas fa-star"></i>
-                                                </li>
-                                                <li>
-                                                    <i class="fas fa-star"></i>
-                                                </li>
-                                            </ul>
-                                            <span class="price">$ 380.00</span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-lg-4 col-md-6 col-sm-12 shop-block">
-                                <div class="shop-block-one">
-                                    <div class="inner-box">
-                                        <figure class="image-box">
-                                            <img
-                                                src="assets/images/resource/shop/shop-11.jpg"
-                                                alt=""
-                                            />
-                                            <ul class="list clearfix">
-                                                <li>
-                                                    <a href="shop-1.html"
-                                                        ><i
-                                                            class="flaticon-cart"
-                                                        ></i
-                                                    ></a>
-                                                </li>
-                                                <li>
-                                                    <a href="shop-details.html"
-                                                        >add to cart</a
-                                                    >
-                                                </li>
-                                            </ul>
-                                        </figure>
-                                        <div class="lower-content">
-                                            <h6>
-                                                <a href="shop-details.html"
-                                                    >Beef Osso Buco</a
-                                                >
-                                            </h6>
-                                            <ul class="rating clearfix">
-                                                <li>
-                                                    <i class="fas fa-star"></i>
-                                                </li>
-                                                <li>
-                                                    <i class="fas fa-star"></i>
-                                                </li>
-                                                <li>
-                                                    <i class="fas fa-star"></i>
-                                                </li>
-                                                <li>
-                                                    <i class="fas fa-star"></i>
-                                                </li>
-                                                <li>
-                                                    <i class="fas fa-star"></i>
-                                                </li>
-                                            </ul>
-                                            <span class="price">$ 450.00</span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-lg-4 col-md-6 col-sm-12 shop-block">
-                                <div class="shop-block-one">
-                                    <div class="inner-box">
-                                        <figure class="image-box">
-                                            <img
-                                                src="assets/images/resource/shop/shop-12.jpg"
-                                                alt=""
-                                            />
-                                            <ul class="list clearfix">
-                                                <li>
-                                                    <a href="shop-1.html"
-                                                        ><i
-                                                            class="flaticon-cart"
-                                                        ></i
-                                                    ></a>
-                                                </li>
-                                                <li>
-                                                    <a href="shop-details.html"
-                                                        >add to cart</a
-                                                    >
-                                                </li>
-                                            </ul>
-                                        </figure>
-                                        <div class="lower-content">
-                                            <h6>
-                                                <a href="shop-details.html"
-                                                    >T-bone steak</a
-                                                >
-                                            </h6>
-                                            <ul class="rating clearfix">
-                                                <li>
-                                                    <i class="fas fa-star"></i>
-                                                </li>
-                                                <li>
-                                                    <i class="fas fa-star"></i>
-                                                </li>
-                                                <li>
-                                                    <i class="fas fa-star"></i>
-                                                </li>
-                                                <li>
-                                                    <i class="fas fa-star"></i>
-                                                </li>
-                                                <li>
-                                                    <i class="fas fa-star"></i>
-                                                </li>
-                                            </ul>
-                                            <span class="price">$ 350.00</span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-lg-4 col-md-6 col-sm-12 shop-block">
-                                <div class="shop-block-one">
-                                    <div class="inner-box">
-                                        <figure class="image-box">
-                                            <img
-                                                src="assets/images/resource/shop/shop-13.jpg"
-                                                alt=""
-                                            />
-                                            <ul class="list clearfix">
-                                                <li>
-                                                    <a href="shop-1.html"
-                                                        ><i
-                                                            class="flaticon-cart"
-                                                        ></i
-                                                    ></a>
-                                                </li>
-                                                <li>
-                                                    <a href="shop-details.html"
-                                                        >add to cart</a
-                                                    >
-                                                </li>
-                                            </ul>
-                                        </figure>
-                                        <div class="lower-content">
-                                            <h6>
-                                                <a href="shop-details.html"
-                                                    >Chuck Roast</a
-                                                >
-                                            </h6>
-                                            <ul class="rating clearfix">
-                                                <li>
-                                                    <i class="fas fa-star"></i>
-                                                </li>
-                                                <li>
-                                                    <i class="fas fa-star"></i>
-                                                </li>
-                                                <li>
-                                                    <i class="fas fa-star"></i>
-                                                </li>
-                                                <li>
-                                                    <i class="fas fa-star"></i>
-                                                </li>
-                                                <li>
-                                                    <i class="fas fa-star"></i>
-                                                </li>
-                                            </ul>
-                                            <span class="price">$ 400.00</span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
+                                <!-- Конец карточки товара -->
+                            </template>
                         </div>
                         <div class="pagination-wrapper centred">
                             <ul class="pagination clearfix">
@@ -571,5 +179,25 @@
 <script>
 export default {
     name: "ShopPageSectionComponent",
+    props: ["server"],
+    data() {
+        return {
+            products: [],
+        };
+    },
+
+    mounted() {
+        this.GetProducts();
+    },
+
+    methods: {
+        GetProducts() {
+            this.server("/products")
+                .then((result) => {
+                    this.products = result.products;
+                })
+                .catch((error) => console.error(error));
+        },
+    },
 };
 </script>

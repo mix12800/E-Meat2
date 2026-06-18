@@ -76,6 +76,7 @@
     />
 
     <ShopPage
+        :server="server"
         :user="user"
         :IsAuth="IsAuth"
         :logout="logout"

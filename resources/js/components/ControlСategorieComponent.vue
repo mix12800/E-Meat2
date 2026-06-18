@@ -36,7 +36,15 @@
                             id="name"
                             placeholder="Имя категории"
                             class="form-control"
+                            :class="{ 'is-invalid': errors.name }"
                         />
+                        <div
+                            v-if="errors.name"
+                            id="validationServerUsernameFeedback"
+                            class="invalid-feedback"
+                        >
+                            {{ errors.name.join(", ") }}
+                        </div>
                     </div>
                 </div>
                 <div class="modal-footer">
@@ -96,6 +104,7 @@
 
     <div class="p-3">
         <button
+            @click="ClearCategory()"
             class="btn theme-btn p-2 pr-5"
             data-toggle="modal"
             data-target="#exampleModal"
@@ -113,15 +122,15 @@
             </tr>
         </thead>
         <tbody>
-            <tr v-for="Category in categories">
-                <td>{{ Category.id }}</td>
-                <td>{{ Category.name }}</td>
+            <tr v-for="category in categories">
+                <td>{{ category.id }}</td>
+                <td>{{ category.name }}</td>
                 <td>
                     <div class="btn-group">
                         <button
                             class="btn theme-btn p-2 pr-5"
                             data-toggle="modal"
-                            @click="GetCategory(Category.id)"
+                            @click="GetCategory(category.id)"
                             data-target="#exampleModal"
                         >
                             <i class="bi bi-pencil"></i>
@@ -130,7 +139,7 @@
                             class="btn theme-btn p-2 pr-5"
                             data-toggle="modal"
                             data-target="#delModal"
-                            @click="GetCategory(Category.id)"
+                            @click="GetCategory(category.id)"
                         >
                             <i class="bi bi-trash3"></i>
                         </button>
@@ -141,6 +150,8 @@
     </table>
 </template>
 <script>
+import { error } from "jquery";
+
 export default {
     name: "ControlСategorieComponent",
     props: ["server"],
@@ -148,6 +159,7 @@ export default {
         return {
             categories: [],
             category: {},
+            errors: {},
         };
     },
 
@@ -164,6 +176,10 @@ export default {
                 .catch((error) => console.error(error));
         },
 
+        ClearCategory() {
+            this.category = {};
+        },
+
         GetCategory(id) {
             this.server("/categories/" + id)
                 .then((result) => {
@@ -174,18 +190,23 @@ export default {
 
         CreateUpdateCategory() {
             let formdata = new FormData();
-            formdata.append("name", this.category.name);
+            if(this.category.name)formdata.append("name", this.category.name);
             this.server(
                 this.category.id
-                    ? `/categories/` + this.category.id
+                    ? "/categories/" + this.category.id
                     : "/categories",
                 this.category.id ? "PATCH" : "POST",
                 formdata,
             )
                 .then((result) => {
-                    this.GetCategories();
-                    document.querySelector("#upcrm").click();
-                    this.category = {};
+                    if (result.errors) {
+                        this.errors = result.errors;
+                    } else {
+                        this.errors = {};
+                        this.GetCategories();
+                        document.querySelector("#upcrm").click();
+                        this.ClearCategory();
+                    }
                 })
                 .catch((error) => console.error(error));
         },

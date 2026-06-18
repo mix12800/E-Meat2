@@ -26,7 +26,7 @@
         <!--End Page Title-->
 
         <!-- shop-page-section -->
-        <ShopPageSectionComponent />
+        <ShopPageSectionComponent :server="server" />
         <!-- shop-page-section end -->
 
         <!-- main-footer -->
@@ -49,7 +49,7 @@ import ShopPageSectionComponent from "../components/ShopPageSectionComponent.vue
 import SidebarComponent from "../components/SidebarComponent.vue";
 export default {
     name: "ShopPage",
-    props: ["user", "IsAuth", "logout", "ChangePage", "page"],
+    props: ["user", "IsAuth", "logout", "ChangePage", "page", "server"],
     data() {
         return {
             preloaderStyle: {

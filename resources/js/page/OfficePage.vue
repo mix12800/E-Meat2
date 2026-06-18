@@ -23,7 +23,7 @@
         <!-- Конец мобильное меню -->
 
         <!--Page Title Office-->
-        <PageTitleOffice :ChangePage="ChangePage"/>
+        <PageTitleOffice :ChangePage="ChangePage" />
         <!--End Page Title-->
 
         <!-- user-info-Office -->
@@ -53,6 +53,11 @@
                 v-if="pageOffice == 'СategorieControlComponent'"
                 :server="server"
             />
+
+            <ControlProductsComponent
+                v-if="pageOffice == 'ControlProductsComponent'"
+                :server="server"
+            />
         </template>
     </div>
 </template>
@@ -67,6 +72,7 @@ import SidebarComponent from "../components/SidebarComponent.vue";
 import UserInfoOffice from "../components/UserInfoOfficeComponent.vue";
 import UserOrderComponent from "../components/UserOrderComponent.vue";
 import ControlСategorieComponent from "../components/ControlСategorieComponent.vue";
+import ControlProductsComponent from "../components/ControlProductsComponent.vue";
 
 export default {
     name: "OfficePage",
@@ -77,6 +83,7 @@ export default {
             preloaderStyle: {
                 backgroundImage: `url(${preloaderGif})`,
             },
+
             pageOffice:
                 localStorage.getItem("pageOffice") || "ControlUserComponent",
         };
@@ -111,6 +118,7 @@ export default {
         ControlUserComponent,
         NavigationOfficeComponent,
         ControlСategorieComponent,
+        ControlProductsComponent,
     },
 };
 </script>

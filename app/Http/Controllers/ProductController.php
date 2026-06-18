@@ -9,12 +9,17 @@ use Illuminate\Support\Facades\Storage;
 
 class ProductController extends Controller
 {
+
+    public function getproducts() {
+        return response()->json(["products"=> Product::with('category')->paginate(9)]);
+    }
+
     /**
      * Display a listing of the resource.
      */
     public function index()
     {
-        // 
+        return response()->json(["products" => Product::with("category")->orderBy("created_at", "desc")->get()]);
     }
 
     /**
@@ -30,7 +35,7 @@ class ProductController extends Controller
      */
     public function store(StoreProductRequest $request)
     {
-        $product = Product::create($request->all() + ['photo' => Storage::disk("photos")->put('/', $request->file("photo"))]);
+        $product = Product::create(['photo' => Storage::disk("public")->put('/photos', $request->file("photo"))] + $request->all());
         return response()->json(["product" => $product]);
     }
 
@@ -39,8 +44,10 @@ class ProductController extends Controller
      */
     public function show(Product $product)
     {
-        //
+        return response()->json(["product" => Product::where("id", $product->id)->with("category")->first()]);
     }
+
+
 
     /**
      * Show the form for editing the specified resource.
@@ -55,7 +62,15 @@ class ProductController extends Controller
      */
     public function update(UpdateProductRequest $request, Product $product)
     {
-        //
+        $product->title = $request->title;
+        $product->description = $request->description;
+        $product->price = $request->price;
+        $product->category_id = $request->category_id;
+        if ($request->file("photo")) {
+            $product->photo = Storage::disk("public")->put("/photo", $request->file("photo"));
+        }
+        $product->save();
+        return response()->json(["product" => $product]);
     }
 
     /**
@@ -63,6 +78,7 @@ class ProductController extends Controller
      */
     public function destroy(Product $product)
     {
-        //
+        $product->delete();
+        return response()->json(["mesage" => 'ok']);
     }
 }
