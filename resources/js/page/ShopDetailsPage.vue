@@ -8,7 +8,7 @@
         <HeaderComponent
             :user="user"
             :IsAuth="IsAuth"
-            :|="logout"
+            :logout="logout"
             :ChangePage="ChangePage"
             :page="page"
         />
