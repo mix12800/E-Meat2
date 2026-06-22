@@ -335,7 +335,11 @@ export default {
                 formdata.append("photo", photo.files[0]);
             }
             formdata.append("category_id", this.product.category.id);
-            this.server("/products", "POST", formdata)
+            this.server(
+                this.product.id ? "/products/" + this.product.id : "/products",
+                this.product.id ? "PATCH" : "POST",
+                formdata,
+            )
                 .then((result) => {
                     if (result.errors) {
                         this.errors = result.errors;

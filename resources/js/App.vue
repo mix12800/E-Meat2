@@ -94,6 +94,15 @@
         :ChangePage="ChangePage"
         v-if="page == 'OfficePage'"
     />
+
+    <ShopDetailsPage
+        :user="user"
+        :IsAuth="IsAuth"
+        :logout="logout"
+        :ChangePage="ChangePage"
+        :page="page"
+        v-if="page == 'ShopDetailsPage'"
+    />
 </template>
 <script>
 import AboutPage from "./page/AboutPage.vue";
@@ -106,6 +115,7 @@ import RegPage from "./page/RegPage.vue";
 import ShopPage from "./page/ShopPage.vue";
 import TeamPage from "./page/TeamPage.vue";
 import TestimonialPage from "./page/TestimonialPage.vue";
+import ShopDetailsPage from "./page/ShopDetailsPage.vue";
 
 export default {
     name: "App.vue",
@@ -192,6 +202,7 @@ export default {
         AuthPage,
         OfficePage,
         ShopPage,
+        ShopDetailsPage,
     },
 };
 </script>

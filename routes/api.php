@@ -13,10 +13,10 @@ use Illuminate\Support\Facades\Route;
 
 Route::post('reg', [UserController::class, 'reg']);
 Route::post('auth', [UserController::class, 'auth']);
+Route::get('products/shop', [ProductController::class, 'getproducts']);
 Route::middleware('auth:sanctum')->group(function () {
     Route::post('logout', [UserController::class, 'logout']);
     Route::get('getuser', [UserController::class, 'getuser']);
-    Route::get('products/shop', [ProductController::class, 'getproducts']);
     Route::middleware('role:admin')
         ->group(function () {
             Route::resource('users', UserController::class);

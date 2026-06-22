@@ -1,0 +1,568 @@
+<template>
+    <div class="boxed_wrapper ltr">
+        <!-- элемент боковой панели -->
+        <SidebarComponent :ChangePage="ChangePage" />
+        <!-- КОНЕЧНЫЙ элемент виджета боковой панели -->
+
+        <!-- шапка -->
+        <HeaderComponent
+            :user="user"
+            :IsAuth="IsAuth"
+            :|="logout"
+            :ChangePage="ChangePage"
+            :page="page"
+        />
+        <!-- Конец шапки -->
+
+        <!-- Мобильное меню  -->
+        <MobileMenuComponent :ChangePage="ChangePage" :page="page" />
+        <!-- Конец мобильное меню -->
+
+        <!-- Page Title Shop Details -->
+        <PageTitleShopDetails />
+        <!--End Page Title-->
+
+        <!-- shop-details -->
+        <section class="shop-details sec-pad">
+            <div class="auto-container">
+                <div class="product-details-content">
+                    <div class="row align-items-center clearfix">
+                        <div class="col-lg-6 col-md-12 col-sm-12 image-column">
+                            <div class="slider-inner">
+                                <div class="bxslider">
+                                    <div class="slider-content">
+                                        <div class="slider-pager">
+                                            <ul class="thumb-box">
+                                                <li>
+                                                    <a
+                                                        class="active"
+                                                        data-slide-index="0"
+                                                        href="#"
+                                                        ><figure>
+                                                            <img
+                                                                src="assets/images/resource/shop/single-thumb-1.jpg"
+                                                                alt=""
+                                                            /></figure
+                                                    ></a>
+                                                </li>
+                                                <li>
+                                                    <a
+                                                        data-slide-index="1"
+                                                        href="#"
+                                                        ><figure>
+                                                            <img
+                                                                src="assets/images/resource/shop/single-thumb-2.jpg"
+                                                                alt=""
+                                                            /></figure
+                                                    ></a>
+                                                </li>
+                                                <li>
+                                                    <a
+                                                        data-slide-index="2"
+                                                        href="#"
+                                                        ><figure>
+                                                            <img
+                                                                src="assets/images/resource/shop/single-thumb-3.jpg"
+                                                                alt=""
+                                                            /></figure
+                                                    ></a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div class="product-image">
+                                            <figure class="image">
+                                                <a
+                                                    href="assets/images/resource/shop/shop-details-1.jpg"
+                                                    class="lightbox-image"
+                                                    data-fancybox="gallery"
+                                                    ><img
+                                                        src="assets/images/resource/shop/shop-details-1.jpg"
+                                                        alt=""
+                                                /></a>
+                                            </figure>
+                                        </div>
+                                    </div>
+                                    <div class="slider-content">
+                                        <div class="slider-pager">
+                                            <ul class="thumb-box">
+                                                <li>
+                                                    <a
+                                                        class="active"
+                                                        data-slide-index="0"
+                                                        href="#"
+                                                        ><figure>
+                                                            <img
+                                                                src="assets/images/resource/shop/single-thumb-1.jpg"
+                                                                alt=""
+                                                            /></figure
+                                                    ></a>
+                                                </li>
+                                                <li>
+                                                    <a
+                                                        data-slide-index="1"
+                                                        href="#"
+                                                        ><figure>
+                                                            <img
+                                                                src="assets/images/resource/shop/single-thumb-2.jpg"
+                                                                alt=""
+                                                            /></figure
+                                                    ></a>
+                                                </li>
+                                                <li>
+                                                    <a
+                                                        data-slide-index="2"
+                                                        href="#"
+                                                        ><figure>
+                                                            <img
+                                                                src="assets/images/resource/shop/single-thumb-3.jpg"
+                                                                alt=""
+                                                            /></figure
+                                                    ></a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div class="product-image">
+                                            <figure class="image">
+                                                <a
+                                                    href="assets/images/resource/shop/shop-details-2.jpg"
+                                                    class="lightbox-image"
+                                                    data-fancybox="gallery"
+                                                    ><img
+                                                        src="assets/images/resource/shop/shop-details-2.jpg"
+                                                        alt=""
+                                                /></a>
+                                            </figure>
+                                        </div>
+                                    </div>
+                                    <div class="slider-content">
+                                        <div class="slider-pager">
+                                            <ul class="thumb-box">
+                                                <li>
+                                                    <a
+                                                        class="active"
+                                                        data-slide-index="0"
+                                                        href="#"
+                                                        ><figure>
+                                                            <img
+                                                                src="assets/images/resource/shop/single-thumb-1.jpg"
+                                                                alt=""
+                                                            /></figure
+                                                    ></a>
+                                                </li>
+                                                <li>
+                                                    <a
+                                                        data-slide-index="1"
+                                                        href="#"
+                                                        ><figure>
+                                                            <img
+                                                                src="assets/images/resource/shop/single-thumb-2.jpg"
+                                                                alt=""
+                                                            /></figure
+                                                    ></a>
+                                                </li>
+                                                <li>
+                                                    <a
+                                                        data-slide-index="2"
+                                                        href="#"
+                                                        ><figure>
+                                                            <img
+                                                                src="assets/images/resource/shop/single-thumb-3.jpg"
+                                                                alt=""
+                                                            /></figure
+                                                    ></a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div class="product-image">
+                                            <figure class="image">
+                                                <a
+                                                    href="assets/images/resource/shop/shop-details-3.jpg"
+                                                    class="lightbox-image"
+                                                    data-fancybox="gallery"
+                                                    ><img
+                                                        src="assets/images/resource/shop/shop-details-3.jpg"
+                                                        alt=""
+                                                /></a>
+                                            </figure>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div
+                            class="col-lg-6 col-md-12 col-sm-12 content-column"
+                        >
+                            <div class="product-details">
+                                <h2>T-bone steak</h2>
+                                <div class="customer-review clearfix">
+                                    <ul class="rating-box clearfix">
+                                        <li><i class="fas fa-star"></i></li>
+                                        <li><i class="fas fa-star"></i></li>
+                                        <li><i class="fas fa-star"></i></li>
+                                        <li><i class="fas fa-star"></i></li>
+                                        <li><i class="fas fa-star"></i></li>
+                                    </ul>
+                                    <div class="reviews">
+                                        <a href="product-single.html"
+                                            >(2 customer review)</a
+                                        >
+                                    </div>
+                                </div>
+                                <div class="item-price"><h3>120$</h3></div>
+                                <div class="text">
+                                    <p>
+                                        consectetur adipisicing elit, sed do
+                                        eiusmod tempor incididunt ut labore et
+                                        dolore magna aliqua. Ut enim ad minim
+                                        veniam, quis nostrud exercitation
+                                        ullamco laboris nisi ut aliquip ex ea
+                                        commodo
+                                    </p>
+                                </div>
+                                <div class="other-links">
+                                    <ul class="category list clearfix">
+                                        <li>Category:</li>
+                                        <li>
+                                            <a href="single-shop-1.html"
+                                                >Beef</a
+                                            >
+                                        </li>
+                                    </ul>
+                                    <ul class="tags list clearfix">
+                                        <li>Tags:</li>
+                                        <li>
+                                            <a href="single-shop-1.html">Food</a
+                                            >,
+                                        </li>
+                                        <li>
+                                            <a href="single-shop-1.html"
+                                                >Sausage</a
+                                            >,
+                                        </li>
+                                        <li>
+                                            <a href="single-shop-1.html"
+                                                >Lamb</a
+                                            >
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="othre-options clearfix">
+                                    <div class="item-quantity">
+                                        <input
+                                            class="quantity-spinner"
+                                            type="text"
+                                            value="1"
+                                            name="quantity"
+                                        />
+                                    </div>
+                                    <div class="btn-box">
+                                        <button type="button" class="theme-btn">
+                                            Add to cart
+                                        </button>
+                                    </div>
+                                </div>
+                                <ul class="share-option clearfix">
+                                    <li>Share is Caring:</li>
+                                    <li>
+                                        <a href="shop-details.html"
+                                            ><i class="fab fa-facebook-f"></i
+                                        ></a>
+                                    </li>
+                                    <li>
+                                        <a href="shop-details.html"
+                                            ><i class="fab fa-twitter"></i
+                                        ></a>
+                                    </li>
+                                    <li>
+                                        <a href="shop-details.html"
+                                            ><i class="fab fa-instagram"></i
+                                        ></a>
+                                    </li>
+                                    <li>
+                                        <a href="shop-details.html"
+                                            ><i class="fab fa-google-plus-g"></i
+                                        ></a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="product-discription">
+                    <div class="tabs-box">
+                        <div class="tab-btn-box">
+                            <ul class="tab-btns tab-buttons clearfix">
+                                <li
+                                    class="tab-btn active-btn"
+                                    data-tab="#tab-1"
+                                >
+                                    Description
+                                </li>
+                                <li class="tab-btn" data-tab="#tab-2">
+                                    Reviews (2)
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="tabs-content">
+                            <div class="tab active-tab" id="tab-1">
+                                <div class="text">
+                                    <h3>About T-bone steak</h3>
+                                    <p>
+                                        consectetur adipisicing elit, sed do
+                                        eiusmod tempor incididunt ut labore et
+                                        dolore magna aliqua. Ut enim ad minim
+                                        veniam, quis nostrud exercitation
+                                        ullamco laboris nisi ut aliquip ex ea
+                                        commodo Lorem ipsum dolor sit amet,
+                                        consectetur adipisicing elit, sed do
+                                        eiusmod tempor incididunt ut labore et
+                                        dolore magna aliqua. Ut enim ad minim
+                                        veniam, quis nostrud exercitation
+                                        ullamco laboris nisi ut aliquip ex ea
+                                        commodo consequat.
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="tab" id="tab-2">
+                                <div class="text">
+                                    <h3>About T-bone steak</h3>
+                                    <p>
+                                        consectetur adipisicing elit, sed do
+                                        eiusmod tempor incididunt ut labore et
+                                        dolore magna aliqua. Ut enim ad minim
+                                        veniam, quis nostrud exercitation
+                                        ullamco laboris nisi ut aliquip ex ea
+                                        commodo Lorem ipsum dolor sit amet,
+                                        consectetur adipisicing elit, sed do
+                                        eiusmod tempor incididunt ut labore et
+                                        dolore magna aliqua. Ut enim ad minim
+                                        veniam, quis nostrud exercitation
+                                        ullamco laboris nisi ut aliquip ex ea
+                                        commodo consequat.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="related-product">
+                    <div class="sec-title style-two centred">
+                        <span>See all products</span>
+                        <h2>Related Products</h2>
+                    </div>
+                    <div class="row clearfix">
+                        <div class="col-lg-3 col-md-6 col-sm-12 shop-block">
+                            <div class="shop-block-one">
+                                <div class="inner-box">
+                                    <figure class="image-box">
+                                        <img
+                                            src="assets/images/resource/shop/shop-9.jpg"
+                                            alt=""
+                                        />
+                                        <ul class="list clearfix">
+                                            <li>
+                                                <a href="shop-1.html"
+                                                    ><i
+                                                        class="flaticon-cart"
+                                                    ></i
+                                                ></a>
+                                            </li>
+                                            <li>
+                                                <a href="shop-details.html"
+                                                    >add to cart</a
+                                                >
+                                            </li>
+                                        </ul>
+                                    </figure>
+                                    <div class="lower-content">
+                                        <h6>
+                                            <a href="shop-details.html"
+                                                >Life Basics Cacay Oil</a
+                                            >
+                                        </h6>
+                                        <ul class="rating clearfix">
+                                            <li><i class="fas fa-star"></i></li>
+                                            <li><i class="fas fa-star"></i></li>
+                                            <li><i class="fas fa-star"></i></li>
+                                            <li><i class="fas fa-star"></i></li>
+                                            <li><i class="fas fa-star"></i></li>
+                                        </ul>
+                                        <span class="price">$ 400.00</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-6 col-sm-12 shop-block">
+                            <div class="shop-block-one">
+                                <div class="inner-box">
+                                    <figure class="image-box">
+                                        <img
+                                            src="assets/images/resource/shop/shop-10.jpg"
+                                            alt=""
+                                        />
+                                        <ul class="list clearfix">
+                                            <li>
+                                                <a href="shop-1.html"
+                                                    ><i
+                                                        class="flaticon-cart"
+                                                    ></i
+                                                ></a>
+                                            </li>
+                                            <li>
+                                                <a href="shop-details.html"
+                                                    >add to cart</a
+                                                >
+                                            </li>
+                                        </ul>
+                                    </figure>
+                                    <div class="lower-content">
+                                        <h6>
+                                            <a href="shop-details.html"
+                                                >Fresho Mutton</a
+                                            >
+                                        </h6>
+                                        <ul class="rating clearfix">
+                                            <li><i class="fas fa-star"></i></li>
+                                            <li><i class="fas fa-star"></i></li>
+                                            <li><i class="fas fa-star"></i></li>
+                                            <li><i class="fas fa-star"></i></li>
+                                            <li><i class="fas fa-star"></i></li>
+                                        </ul>
+                                        <span class="price">$ 380.00</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-6 col-sm-12 shop-block">
+                            <div class="shop-block-one">
+                                <div class="inner-box">
+                                    <figure class="image-box">
+                                        <img
+                                            src="assets/images/resource/shop/shop-11.jpg"
+                                            alt=""
+                                        />
+                                        <ul class="list clearfix">
+                                            <li>
+                                                <a href="shop-1.html"
+                                                    ><i
+                                                        class="flaticon-cart"
+                                                    ></i
+                                                ></a>
+                                            </li>
+                                            <li>
+                                                <a href="shop-details.html"
+                                                    >add to cart</a
+                                                >
+                                            </li>
+                                        </ul>
+                                    </figure>
+                                    <div class="lower-content">
+                                        <h6>
+                                            <a href="shop-details.html"
+                                                >Beef Osso Buco</a
+                                            >
+                                        </h6>
+                                        <ul class="rating clearfix">
+                                            <li><i class="fas fa-star"></i></li>
+                                            <li><i class="fas fa-star"></i></li>
+                                            <li><i class="fas fa-star"></i></li>
+                                            <li><i class="fas fa-star"></i></li>
+                                            <li><i class="fas fa-star"></i></li>
+                                        </ul>
+                                        <span class="price">$ 450.00</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-6 col-sm-12 shop-block">
+                            <div class="shop-block-one">
+                                <div class="inner-box">
+                                    <figure class="image-box">
+                                        <img
+                                            src="assets/images/resource/shop/shop-12.jpg"
+                                            alt=""
+                                        />
+                                        <ul class="list clearfix">
+                                            <li>
+                                                <a href="shop-1.html"
+                                                    ><i
+                                                        class="flaticon-cart"
+                                                    ></i
+                                                ></a>
+                                            </li>
+                                            <li>
+                                                <a href="shop-details.html"
+                                                    >add to cart</a
+                                                >
+                                            </li>
+                                        </ul>
+                                    </figure>
+                                    <div class="lower-content">
+                                        <h6>
+                                            <a href="shop-details.html"
+                                                >T-bone steak</a
+                                            >
+                                        </h6>
+                                        <ul class="rating clearfix">
+                                            <li><i class="fas fa-star"></i></li>
+                                            <li><i class="fas fa-star"></i></li>
+                                            <li><i class="fas fa-star"></i></li>
+                                            <li><i class="fas fa-star"></i></li>
+                                            <li><i class="fas fa-star"></i></li>
+                                        </ul>
+                                        <span class="price">$ 350.00</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- shop-details end -->
+
+        <!-- main-footer -->
+        <MainFooterComponent :ChangePage="ChangePage" />
+        <!-- main-footer end -->
+
+        <!--Scroll to top-->
+        <button class="scroll-top scroll-to-target" data-target="html">
+            <span class="fa fa-arrow-up"></span>
+        </button>
+    </div>
+</template>
+<script>
+import preloaderGif from "../../images/carneshop/preloader.gif";
+import HeaderComponent from "../components/HeaderComponent.vue";
+import MainFooterComponent from "../components/MainFooterComponent.vue";
+import MobileMenuComponent from "../components/MobileMenuComponent.vue";
+import PageTitleShopDetails from "../components/PageTitleShopDetails.vue";
+import SidebarComponent from "../components/SidebarComponent.vue";
+
+export default {
+    name: "ShopDetailsPage",
+    props: ["ChangePage", "page", "user", "IsAuth", "logout"],
+      data() {
+        return {
+            preloaderStyle: {
+                backgroundImage: `url(${preloaderGif})`,
+            },
+        };
+    },
+    mounted() {
+        this.$nextTick(() => {
+            if (typeof window.initCarneshopTheme === "function") {
+                window.initCarneshopTheme();
+            }
+        });
+    },
+
+    components: {
+        HeaderComponent,
+        MainFooterComponent,
+        MobileMenuComponent,
+        PageTitleShopDetails,
+        SidebarComponent,
+    },
+};
+</script>

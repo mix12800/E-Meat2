@@ -8,6 +8,7 @@
         <SidebarComponent :ChangePage="ChangePage" />
         <!-- КОНЕЧНЫЙ элемент виджета боковой панели -->
 
+        <!-- шапка -->
         <HeaderComponent
             :user="user"
             :IsAuth="IsAuth"
@@ -26,7 +27,7 @@
         <!--End Page Title-->
 
         <!-- shop-page-section -->
-        <ShopPageSectionComponent :server="server" />
+        <ShopPageSectionComponent :server="server" :ChangePage="ChangePage" />
         <!-- shop-page-section end -->
 
         <!-- main-footer -->

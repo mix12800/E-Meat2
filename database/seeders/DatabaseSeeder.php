@@ -3,6 +3,7 @@
 namespace Database\Seeders;
 
 use App\Models\Category;
+use App\Models\Product;
 use App\Models\User;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
@@ -126,12 +127,181 @@ class DatabaseSeeder extends Seeder
             ]
         ];
 
+        $products = [
+            [
+                "category_id" => 1,
+                "title" => 'Мясо',
+                "description" => 'Мясо Мясо Мясо Мясо Мясо Мясо',
+                "photo" => 'photos/05444a223de9cfbd3a7d18909dceb3fb.jpg',
+                "price" => 20,
+                "quantity" => 25,
+            ],
+            [
+                "category_id" => 1,
+                "title" => 'Мясо',
+                "description" => 'Мясо Мясо Мясо Мясо Мясо Мясо',
+                "photo" => 'photos/05444a223de9cfbd3a7d18909dceb3fb.jpg',
+                "price" => 20,
+                "quantity" => 25,
+            ],
+            [
+                "category_id" => 1,
+                "title" => 'Мясо',
+                "description" => 'Мясо Мясо Мясо Мясо Мясо Мясо',
+                "photo" => 'photos/05444a223de9cfbd3a7d18909dceb3fb.jpg',
+                "price" => 20,
+                "quantity" => 25,
+            ],
+            [
+                "category_id" => 1,
+                "title" => 'Мясо',
+                "description" => 'Мясо Мясо Мясо Мясо Мясо Мясо',
+                "photo" => 'photos/05444a223de9cfbd3a7d18909dceb3fb.jpg',
+                "price" => 20,
+                "quantity" => 25,
+            ],
+            [
+                "category_id" => 1,
+                "title" => 'Мясо',
+                "description" => 'Мясо Мясо Мясо Мясо Мясо Мясо',
+                "photo" => 'photos/05444a223de9cfbd3a7d18909dceb3fb.jpg',
+                "price" => 20,
+                "quantity" => 25,
+            ],
+            [
+                "category_id" => 1,
+                "title" => 'Мясо',
+                "description" => 'Мясо Мясо Мясо Мясо Мясо Мясо',
+                "photo" => 'photos/05444a223de9cfbd3a7d18909dceb3fb.jpg',
+                "price" => 20,
+                "quantity" => 25,
+            ],
+            [
+                "category_id" => 1,
+                "title" => 'Мясо',
+                "description" => 'Мясо Мясо Мясо Мясо Мясо Мясо',
+                "photo" => 'photos/05444a223de9cfbd3a7d18909dceb3fb.jpg',
+                "price" => 20,
+                "quantity" => 25,
+            ],
+            [
+                "category_id" => 1,
+                "title" => 'Мясо',
+                "description" => 'Мясо Мясо Мясо Мясо Мясо Мясо',
+                "photo" => 'photos/05444a223de9cfbd3a7d18909dceb3fb.jpg',
+                "price" => 20,
+                "quantity" => 25,
+            ],
+            [
+                "category_id" => 1,
+                "title" => 'Мясо',
+                "description" => 'Мясо Мясо Мясо Мясо Мясо Мясо',
+                "photo" => 'photos/05444a223de9cfbd3a7d18909dceb3fb.jpg',
+                "price" => 20,
+                "quantity" => 25,
+            ],
+            [
+                "category_id" => 1,
+                "title" => 'Мясо',
+                "description" => 'Мясо Мясо Мясо Мясо Мясо Мясо',
+                "photo" => 'photos/05444a223de9cfbd3a7d18909dceb3fb.jpg',
+                "price" => 20,
+                "quantity" => 25,
+            ],
+            [
+                "category_id" => 1,
+                "title" => 'Мясо',
+                "description" => 'Мясо Мясо Мясо Мясо Мясо Мясо',
+                "photo" => 'photos/05444a223de9cfbd3a7d18909dceb3fb.jpg',
+                "price" => 20,
+                "quantity" => 25,
+            ],
+            [
+                "category_id" => 1,
+                "title" => 'Мясо',
+                "description" => 'Мясо Мясо Мясо Мясо Мясо Мясо',
+                "photo" => 'photos/05444a223de9cfbd3a7d18909dceb3fb.jpg',
+                "price" => 20,
+                "quantity" => 25,
+            ],
+            [
+                "category_id" => 1,
+                "title" => 'Мясо',
+                "description" => 'Мясо Мясо Мясо Мясо Мясо Мясо',
+                "photo" => 'photos/05444a223de9cfbd3a7d18909dceb3fb.jpg',
+                "price" => 20,
+                "quantity" => 25,
+            ],
+            [
+                "category_id" => 1,
+                "title" => 'Мясо',
+                "description" => 'Мясо Мясо Мясо Мясо Мясо Мясо',
+                "photo" => 'photos/05444a223de9cfbd3a7d18909dceb3fb.jpg',
+                "price" => 20,
+                "quantity" => 25,
+            ],
+            [
+                "category_id" => 1,
+                "title" => 'Мясо',
+                "description" => 'Мясо Мясо Мясо Мясо Мясо Мясо',
+                "photo" => 'photos/05444a223de9cfbd3a7d18909dceb3fb.jpg',
+                "price" => 20,
+                "quantity" => 25,
+            ],
+            [
+                "category_id" => 1,
+                "title" => 'Мясо',
+                "description" => 'Мясо Мясо Мясо Мясо Мясо Мясо',
+                "photo" => 'photos/05444a223de9cfbd3a7d18909dceb3fb.jpg',
+                "price" => 20,
+                "quantity" => 25,
+            ],
+            [
+                "category_id" => 1,
+                "title" => 'Мясо',
+                "description" => 'Мясо Мясо Мясо Мясо Мясо Мясо',
+                "photo" => 'photos/05444a223de9cfbd3a7d18909dceb3fb.jpg',
+                "price" => 20,
+                "quantity" => 25,
+            ],
+            [
+                "category_id" => 1,
+                "title" => 'Мясо',
+                "description" => 'Мясо Мясо Мясо Мясо Мясо Мясо',
+                "photo" => 'photos/05444a223de9cfbd3a7d18909dceb3fb.jpg',
+                "price" => 20,
+                "quantity" => 25,
+            ],
+            [
+                "category_id" => 1,
+                "title" => 'Мясо',
+                "description" => 'Мясо Мясо Мясо Мясо Мясо Мясо',
+                "photo" => 'photos/05444a223de9cfbd3a7d18909dceb3fb.jpg',
+                "price" => 20,
+                "quantity" => 25,
+            ],
+            [
+                "category_id" => 1,
+                "title" => 'Мясо',
+                "description" => 'Мясо Мясо Мясо Мясо Мясо Мясо',
+                "photo" => 'photos/05444a223de9cfbd3a7d18909dceb3fb.jpg',
+                "price" => 20,
+                "quantity" => 25,
+            ],
+        ];
+
+
+
         foreach ($Users as $User) {
             User::create($User);
         }
 
         foreach ($Categories as $Category) {
             Category::create($Category);
+        }
+
+        foreach ($products as $product) {
+            Product::create($product);
         }
     }
 }

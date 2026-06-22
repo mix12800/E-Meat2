@@ -93,7 +93,7 @@
                 <div class="col-lg-9 col-md-12 col-sm-12 content-side">
                     <div class="our-shop">
                         <div class="row clearfix">
-                            <template v-for="product in products">
+                            <template v-for="product in products.data">
                                 <!--Карточка товара -->
                                 <div
                                     class="col-lg-4 col-md-6 col-sm-12 shop-block"
@@ -101,58 +101,50 @@
                                     <div class="shop-block-one">
                                         <div class="inner-box">
                                             <figure class="image-box">
-                                                <img :src="'storage/'+ product.photo" alt="" />
+                                                <img
+                                                    :src="
+                                                        'storage/' +
+                                                        product.photo
+                                                    "
+                                                    alt=""
+                                                />
                                                 <ul class="list clearfix">
                                                     <li>
-                                                        <a href="shop-1.html"
+                                                        <a
+                                                            @click.prevent="
+                                                                ChangePage('ShopDetailsPage')
+                                                            "
+                                                            href="#"
                                                             ><i
-                                                                class="flaticon-cart"
+                                                                class="bi bi-info-square"
                                                             ></i
                                                         ></a>
                                                     </li>
                                                     <li>
                                                         <a
-                                                            href="shop-details.html"
-                                                            >В карзину</a
+                                                            @click.prevent="
+                                                                ChangePage('ShopDetailsPage')
+                                                            "
+                                                            href="#"
+                                                            >Подробнее</a
                                                         >
                                                     </li>
                                                 </ul>
                                             </figure>
                                             <div class="lower-content">
                                                 <h6>
-                                                    <a href="shop-details.html"
-                                                        >Whole Tenderloin</a
-                                                    >
+                                                    <a href="#"
+                                                        >{{ product.title }}
+                                                    </a>
                                                 </h6>
-                                                <ul class="rating clearfix">
-                                                    <li>
-                                                        <i
-                                                            class="fas fa-star"
-                                                        ></i>
-                                                    </li>
-                                                    <li>
-                                                        <i
-                                                            class="fas fa-star"
-                                                        ></i>
-                                                    </li>
-                                                    <li>
-                                                        <i
-                                                            class="fas fa-star"
-                                                        ></i>
-                                                    </li>
-                                                    <li>
-                                                        <i
-                                                            class="fas fa-star"
-                                                        ></i>
-                                                    </li>
-                                                    <li>
-                                                        <i
-                                                            class="fas fa-star"
-                                                        ></i>
-                                                    </li>
-                                                </ul>
+                                                <span>
+                                                    {{
+                                                        product.category.name
+                                                    }}</span
+                                                >
+
                                                 <span class="price"
-                                                    >$ 400.00</span
+                                                    >$ {{ product.price }}</span
                                                 >
                                             </div>
                                         </div>
@@ -163,11 +155,18 @@
                         </div>
                         <div class="pagination-wrapper centred">
                             <ul class="pagination clearfix">
-                                <li>
-                                    <a href="shop-1.html" class="active">1</a>
-                                </li>
-                                <li><a href="shop-1.html">2</a></li>
-                                <li><a href="shop-1.html">3</a></li>
+                                <template v-for="PageBtn in products.links">
+                                    <li v-if="!isNaN(parseInt(PageBtn.label))">
+                                        <a
+                                            href="#"
+                                            @click.prevent="
+                                                GetProducts(PageBtn.label)
+                                            "
+                                            :class="{ active: PageBtn.active }"
+                                            >{{ PageBtn.label }}</a
+                                        >
+                                    </li>
+                                </template>
                             </ul>
                         </div>
                     </div>
@@ -179,7 +178,7 @@
 <script>
 export default {
     name: "ShopPageSectionComponent",
-    props: ["server"],
+    props: ["server", "ChangePage"],
     data() {
         return {
             products: [],
@@ -191,8 +190,8 @@ export default {
     },
 
     methods: {
-        GetProducts() {
-            this.server("/products")
+        GetProducts(page = 1) {
+            this.server("/products/shop?page=" + page)
                 .then((result) => {
                     this.products = result.products;
                 })
